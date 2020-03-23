@@ -9,4 +9,9 @@ add_action('after_setup_theme', function () {
 // Hide admin bar on the front end
 add_filter('show_admin_bar', '__return_false');
 
-require get_template_directory() . '/plate.php';
+add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_style('style', get_stylesheet_directory_uri() . "/assets/styles/app.css");
+    wp_enqueue_script("script", get_template_directory_uri() . "/assets/scripts/app.js");
+});
+
+require get_template_directory() . "/plate.php";
