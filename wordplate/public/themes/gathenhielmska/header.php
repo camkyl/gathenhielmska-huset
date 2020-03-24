@@ -11,3 +11,19 @@
 </head>
 
 <body>
+
+    <?php $pages = get_pages(["sort_column" => "menu_order"]); ?>
+
+    <header>
+        <nav>
+            <ul>
+                <?php foreach ($pages as $page) : ?>
+                    <li>
+                        <a href="<?php echo get_permalink($page); ?>">
+                            <?php echo $page->post_title; ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </nav>
+    </header>
