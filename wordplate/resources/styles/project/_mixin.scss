@@ -1,0 +1,46 @@
+// Media queries
+
+// Break point for smartphones
+$break-small: 417px;
+
+// Break points for tablets
+$break-large: 830px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+// Below is an example of how to use mixin
+/*
+form {
+    display: flex;
+    width: 80vw;
+
+    input {
+        width: 80%;
+        height: 40px;
+
+        @include respond-to(wide-screens) {
+            height: 50px;
+        }
+    }
+
+    button {
+       all: unset;
+       width: 51px;
+       height: 40px;
+
+       @include respond-to(wide-screen) {
+        height: 50px;
+    }
+  }
+
+*/

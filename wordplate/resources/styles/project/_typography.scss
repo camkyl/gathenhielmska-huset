@@ -1,0 +1,33 @@
+// All styles related to typography such as p, a, h1, etc.
+
+* {
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-family: $text;
+}
+
+a, a:visited {
+  font-family: $text;
+  color: $black;
+}
+
+

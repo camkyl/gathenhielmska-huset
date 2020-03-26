@@ -1,3 +1,8 @@
 /* WordPlate */
-@import "./homepage.scss";
-@import "./menu.scss";
+
+// In "project" we store variables, typography, break-points, etc.
+@import './project/_project';
+
+// In "components" we store all components on the website, such as nav, sections, footer etc.
+@import './components/_components';
+

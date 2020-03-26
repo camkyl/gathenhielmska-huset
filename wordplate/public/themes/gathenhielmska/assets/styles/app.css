@@ -1,2 +1,78 @@
 /* WordPlate */
 
+* {
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-family: "Arial", sans-serif;
+}
+
+a,
+a:visited {
+  font-family: "Arial", sans-serif;
+  color: #000000;
+}
+
+/*
+.footer {
+    @extend %flex-center;
+    @extend %flex-column;
+}
+*/
+
+/*
+form {
+    display: flex;
+    width: 80vw;
+
+    input {
+        width: 80%;
+        height: 40px;
+
+        @include respond-to(wide-screens) {
+            height: 50px;
+        }
+    }
+
+    button {
+       all: unset;
+       width: 51px;
+       height: 40px;
+
+       @include respond-to(wide-screen) {
+        height: 50px;
+    }
+  }
+
+*/
+
+/*
+@import 'header';
+@import 'search';
+@import 'gallery';
+@import 'not-found';
+*/
+

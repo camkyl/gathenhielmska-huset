@@ -1,0 +1,21 @@
+// Repeatedly used css
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-column {
+  flex-direction: column;
+}
+
+
+// Example of how to include placeholders:
+
+/*
+.footer {
+    @extend %flex-center;
+    @extend %flex-column;
+}
+*/
