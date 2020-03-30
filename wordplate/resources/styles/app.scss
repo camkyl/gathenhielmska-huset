@@ -1,5 +1,11 @@
 /* WordPlate */
 
+// CSS library that provides consistent, cross-browser default styling of HTML elements
+@import './../../node_modules/sanitize.css/sanitize.css';
+/*
+@import 'node_modules/sanitize.css/sanitize';
+*/
+
 // In "project" we store variables, typography, break-points, etc.
 @import './project/_project';
 
