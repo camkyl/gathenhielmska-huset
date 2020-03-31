@@ -1,1 +1,10 @@
 // The footer of thw whole website
+ .footer {
+   width: 100vw;
+   @extend %flex-col-cen;
+
+    @include respond-to(wide-screens) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+ }

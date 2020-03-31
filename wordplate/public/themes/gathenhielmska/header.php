@@ -14,18 +14,27 @@
 
     <?php $pages = get_pages(["sort_column" => "menu_order"]); ?>
 
-    <header>
-        <nav>
-            <ul>
-                <?php foreach ($pages as $page) : ?>
-                    <li>
-                        <a href="<?php echo get_permalink($page); ?>">
-                            <?php echo $page->post_title; ?>
-                        </a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="header__left">
+            <img src="#" alt="logo">
+        </div>
+
+        <div class="header__right">
+            <div>
+                <p>Språk</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <?php foreach ($pages as $page) : ?>
+                        <li>
+                            <a href="<?php echo get_permalink($page); ?>">
+                                <?php echo $page->post_title; ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <main class="main">
