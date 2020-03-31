@@ -1,6 +1,6 @@
 // Repeatedly used css
 
-%flex-center {
+%flex-center-center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +10,17 @@
   flex-direction: column;
 }
 
+%flex-col-cen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+%flex-just-sp-bet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 // Example of how to include placeholders:
 

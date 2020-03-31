@@ -1,1 +1,22 @@
 // The header of the whole website
+
+.header {
+  width: 100vw;
+  @extend %flex-just-sp-bet;
+
+  &__left {
+    background-color: rgb(199, 199, 199);
+  }
+
+  &__right {
+    @extend %flex-just-sp-bet;
+  }
+}
+
+.nav {
+  margin: 10px;
+}
+
+.main {
+  width: 100vw;
+}
