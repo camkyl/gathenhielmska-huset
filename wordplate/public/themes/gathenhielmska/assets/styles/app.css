@@ -676,6 +676,14 @@ form {
   margin: 10px;
 }
 
+.nav ul {
+  display: flex;
+}
+
+.nav ul li {
+  margin: 5px;
+}
+
 .main {
   width: 100vw;
 }

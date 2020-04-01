@@ -16,7 +16,8 @@
 
     <header class="header">
         <div class="header__left">
-            <img src="#" alt="logo">
+            <a href="http://localhost:8000/"><img src="#" alt="logo"></a>
+            <!--Can't make it work with the echo site_url();, it gives me the adress http://localhost:8000/wordpress >-->
         </div>
 
         <div class="header__right">
