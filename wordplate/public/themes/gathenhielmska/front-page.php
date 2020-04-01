@@ -3,9 +3,8 @@
 <section class="landing-page">
 
     <div class="landing-page__hero">
-        <p>Detta är förstasidan</p>
+        <h1>Gathenhielmska</h1>
         <p>This is where the hero image will be. </p>
-        <p>Scroll down for more</p>
     </div>
 
     <div class="landing-page__program">
