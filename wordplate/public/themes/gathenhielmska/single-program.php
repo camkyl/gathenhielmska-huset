@@ -15,21 +15,16 @@
                             ?>"><?php // the_field('email');
                                 ?></a>
 
-            <a href="<?php // the_field('github_profile');
-                        ?>">Go to Github profile --></a>
+            <a href="<?php the_field('program_tickets');
+                        ?>">Buy tickets -></a>
 
-            <div class="student-image">
-                <?php //if (get_field('image')) :
-                ?>
-                <?php // $image = get_field('image');
-                ?>
-                <img src="<?php // echo $image['url']
-                            ?>" alt="something">
-                <?php // else:
-                ?>
-                <img src="" alt="placeholder">
-                <?php // endif;
-                ?>
+            <div class="program-image">
+                <?php if (get_field('image')) : ?>
+                    <?php $image = get_field('image'); ?>
+                    <img src="<?php echo $image['url']; ?>" alt="something">
+                <?php else : ?>
+                    <img src="" alt="placeholder">
+                <?php endif; ?>
             </div>
 
             <p><?php the_content(); ?></p>

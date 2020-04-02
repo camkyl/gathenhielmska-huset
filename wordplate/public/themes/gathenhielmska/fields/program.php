@@ -1,19 +1,19 @@
 <?php
 
 declare(strict_types=1);
-/*
+
 if (function_exists('acf_add_local_field_group')) {
 
     acf_add_local_field_group(array(
         'key' => 'group_5e5e578f755b3',
-        'title' => 'Student info',
+        'title' => 'Program info',
         'fields' => array(
             array(
                 'key' => 'field_5e5e579c604a4',
-                'label' => 'Email',
-                'name' => 'email',
-                'type' => 'email',
-                'instructions' => 'Add student email',
+                'label' => 'Program',
+                'name' => 'text',
+                'type' => 'text',
+                'instructions' => 'Add program info',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -28,10 +28,26 @@ if (function_exists('acf_add_local_field_group')) {
             ),
             array(
                 'key' => 'field_5e5e57b4604a5',
-                'label' => 'Github profile',
-                'name' => 'github_profile',
+                'label' => 'Program tickets',
+                'name' => 'program_tickets',
                 'type' => 'url',
-                'instructions' => 'Students Github profile',
+                'instructions' => 'Link to ticket site',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+            ),
+            array(
+                'key' => 'field_5e5e57b4604a6',
+                'label' => 'Program image',
+                'name' => 'program_image',
+                'type' => 'image',
+                'instructions' => 'Image representing the program',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -48,7 +64,7 @@ if (function_exists('acf_add_local_field_group')) {
                 array(
                     'param' => 'post_type',
                     'operator' => '==',
-                    'value' => 'student',
+                    'value' => 'program',
                 ),
             ),
         ),
@@ -62,7 +78,7 @@ if (function_exists('acf_add_local_field_group')) {
         'description' => '',
     ));
 }
-*/
+
 
 
 // endif;
