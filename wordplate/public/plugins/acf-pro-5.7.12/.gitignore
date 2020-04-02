@@ -1,0 +1,4 @@
+/codekit-config.json
+node_modules
+.DS_Store
+assets/inc/select2/dist
