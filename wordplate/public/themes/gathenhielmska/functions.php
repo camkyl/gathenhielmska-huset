@@ -14,6 +14,13 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script("script", get_template_directory_uri() . "/assets/scripts/app.js");
 });
 
+function post_remove()
+{
+    remove_menu_page('edit.php');
+}
+
+add_action('admin_menu', 'post_remove');
+
 require get_template_directory() . "/plate.php";
 require get_template_directory() . "/post-types/event.php";
 require get_template_directory() . "/taxonomies/program.php";
