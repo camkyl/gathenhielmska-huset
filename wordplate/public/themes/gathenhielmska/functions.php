@@ -23,5 +23,7 @@ add_action('admin_menu', 'post_remove');
 
 require get_template_directory() . "/plate.php";
 require get_template_directory() . "/post-types/event.php";
+require get_template_directory() . "/post-types/news.php";
 require get_template_directory() . "/taxonomies/program.php";
+require get_template_directory() . "/taxonomies/news.php";
 require get_template_directory() . "/fields/program.php";
