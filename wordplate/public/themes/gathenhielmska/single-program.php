@@ -10,14 +10,6 @@
             <!--This will be the title of the student, in our case the program or a person working at gathenhielmska-->
             <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 
-            <h2>Contact:</h2>
-            <a href="mailto:<?php //the_field('email');
-                            ?>"><?php // the_field('email');
-                                ?></a>
-
-            <a href="<?php the_field('program_tickets');
-                        ?>">Buy tickets -></a>
-
             <div class="program-image">
                 <?php if (get_field('image')) : ?>
                     <?php $image = get_field('image'); ?>

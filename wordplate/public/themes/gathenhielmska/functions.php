@@ -21,6 +21,7 @@ function post_remove()
 
 add_action('admin_menu', 'post_remove');
 
+
 require get_template_directory() . "/plate.php";
 require get_template_directory() . "/post-types/event.php";
 require get_template_directory() . "/post-types/news.php";
