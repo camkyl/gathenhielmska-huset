@@ -28,3 +28,23 @@ require get_template_directory() . "/post-types/news.php";
 require get_template_directory() . "/taxonomies/program.php";
 require get_template_directory() . "/taxonomies/news.php";
 require get_template_directory() . "/fields/program.php";
+
+// Gutenberg with ACF
+add_action('acf/init', 'my_acf_blocks_init');
+function my_acf_blocks_init()
+{
+    // Check function exists.
+    if (function_exists('acf_register_block_type')) {
+
+        // Register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'news', // the slug, what is used in code
+            'title'             => __('News-template'), // human readable thing
+            'description'       => __('Template used for news articles'),
+            'render_template'   => 'template-parts/blocks/news/news.php', // important!
+            // 'category'          => 'formatting',
+            'icon' => 'dashicons-format-aside', // icon that appears in the editor
+            'keywords' => ['news', 'article'] // to make it more searchable, max 3
+        ));
+    }
+}

@@ -15,15 +15,7 @@
 
             <h2><?php the_title(); ?></h2>
 
-            <p>-------------</p>
-            <?php $content = get_the_content(); ?>
-            <?php //var_dump($content);
-            ?>
-
-            <?php $parts = explode(',', get_the_content()); ?>
-            <?php var_dump($parts); ?>
-            <p>-------------</p>
-
+            <!--the_content() is what's in template-parts/blocks/news/news.php-->
             <p><?php the_content(); ?></p>
 
         <?php endwhile; ?>
