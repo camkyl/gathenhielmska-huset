@@ -1,0 +1,58 @@
+.businesses {
+  @extend %flex-col-cen;
+  width: 100vw;
+  background-color: $oppethav;
+
+  &__content-wrapper {
+    @extend %flex-col-cen;
+    width: 90%;
+    padding: 10px 20px;
+
+    @include respond-to(wide-screens) {
+      width: 60%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      // justify-content: center;
+    }
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 12px;
+    text-align: center;
+
+    @include respond-to(wide-screens) {
+      width: 33.33%;
+      text-align: left;
+    }
+  }
+}
+
+.businesses h3 {
+  color: $timglas;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 0.86rem;
+  margin: 5px;
+
+  @include respond-to(wide-screens) {
+    font-size: 1.5rem;
+  }
+}
+
+.businesses p {
+  color: $timglas;
+  margin: 0;
+
+  &.--title {
+    font-weight: 700;
+  }
+
+  &.--role {
+    font-weight: 300;
+  }
+}
+
+

@@ -1,4 +1,24 @@
 /* Import all pages */
 
-@import './front-page';
+@import 'front-page';
+@import 'businesses';
+@import 'news';
+
+// The horizontal lines besides the headings
+.heading-wrapper {
+  display: flex;
+  align-items: center;
+  width: 90vw;
+
+  @include respond-to(wide-screens) {
+    width: 60vw;
+  }
+
+  &__left,
+  &__right {
+    flex: 1;
+    background-color: $timglas;
+    height: 1px;
+  }
+}
 
