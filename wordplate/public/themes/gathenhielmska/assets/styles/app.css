@@ -1,4 +1,6 @@
-/* Document
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@100;
+
+400;700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700&display=swap);/* Document
  * ========================================================================== */
 
 /**
@@ -569,9 +571,8 @@ textarea,
 /*
 @import 'node_modules/sanitize.css/sanitize';
 */
-
 * {
-  font-size: 14px;
+  font-size: 16px;
   box-sizing: border-box;
 }
 
@@ -581,7 +582,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Muli", sans-serif;
 }
 
 h1 {
@@ -589,20 +590,23 @@ h1 {
 }
 
 h2 {
-  font-size: 2.8rem;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: lighter;
 }
 
 p {
-  font-family: "Arial", sans-serif;
+  font-size: 1rem;
+  font-family: "Muli", sans-serif;
 }
 
 a,
 a:visited {
-  font-family: "Arial", sans-serif;
+  font-family: "Muli", sans-serif;
   color: #000000;
 }
 
@@ -612,6 +616,8 @@ a:visited {
   align-items: center;
 }
 
+.businesses__content-wrapper,
+.businesses,
 .footer {
   display: flex;
   flex-direction: column;
@@ -713,5 +719,84 @@ form {
   height: 80vh;
   padding: 50px;
   background-color: #979797;
+}
+
+.businesses {
+  width: 100vw;
+  background-color: #2f3e46;
+}
+
+.businesses__content-wrapper {
+  width: 90%;
+  padding: 10px 20px;
+}
+
+@media only screen and (min-width: 830px) {
+  .businesses__content-wrapper {
+    width: 60%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.businesses__article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 830px) {
+  .businesses__article {
+    width: 33.33%;
+    text-align: left;
+  }
+}
+
+.businesses h3 {
+  color: #EFDECE;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 0.86rem;
+  margin: 5px;
+}
+
+@media only screen and (min-width: 830px) {
+  .businesses h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.businesses p {
+  color: #EFDECE;
+  margin: 0;
+}
+
+.businesses p.\--title {
+  font-weight: 700;
+}
+
+.businesses p.\--role {
+  font-weight: 300;
+}
+
+.heading-wrapper {
+  display: flex;
+  align-items: center;
+  width: 90vw;
+}
+
+@media only screen and (min-width: 830px) {
+  .heading-wrapper {
+    width: 60vw;
+  }
+}
+
+.heading-wrapper__left,
+.heading-wrapper__right {
+  flex: 1;
+  background-color: #EFDECE;
+  height: 1px;
 }
 

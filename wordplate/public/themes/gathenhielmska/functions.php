@@ -36,15 +36,24 @@ function my_acf_blocks_init()
     // Check function exists.
     if (function_exists('acf_register_block_type')) {
 
-        // Register a testimonial block.
+        // Register news block.
         acf_register_block_type(array(
             'name'              => 'news', // the slug, what is used in code
             'title'             => __('News-template'), // human readable thing
             'description'       => __('Template used for news articles'),
             'render_template'   => 'template-parts/blocks/news/news.php', // important!
-            // 'category'          => 'formatting',
             'icon' => 'dashicons-format-aside', // icon that appears in the editor
             'keywords' => ['news', 'article'] // to make it more searchable, max 3
+        ));
+
+        // Register business block.
+        acf_register_block_type(array(
+            'name'              => 'businesses', // the slug, what is used in code
+            'title'             => __('Businesses-template'), // human readable thing
+            'description'       => __('Template used to display businesses at Gathenhielmska'),
+            'render_template'   => 'template-parts/blocks/businesses/businesses.php', // important!
+            'icon' => 'dashicons-editor-insertmore', // icon that appears in the editor
+            'keywords' => ['businesses', 'gathenhielmska', 'company'] // to make it more searchable, max 3
         ));
     }
 }
