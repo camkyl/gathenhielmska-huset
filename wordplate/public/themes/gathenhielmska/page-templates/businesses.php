@@ -13,7 +13,7 @@
                 <div class="heading-wrapper__right"></div>
             </div>
 
-            <!--the_content() is what's in template-parts/blocks/news/news.php-->
+            <!--the_content() is what's in template-parts/blocks/businesses/businesses.php-->
             <div class="businesses__content-wrapper">
                 <?php the_content(); ?>
             </div>

@@ -6,7 +6,7 @@
   &__content-wrapper {
     @extend %flex-col-cen;
     width: 90%;
-    padding: 10px 20px;
+    padding: 10px;
 
     @include respond-to(wide-screens) {
       width: 60%;
@@ -21,6 +21,7 @@
     flex-direction: column;
     width: 100%;
     margin-bottom: 12px;
+    padding: 10px;
     text-align: center;
 
     @include respond-to(wide-screens) {
@@ -42,7 +43,7 @@
   }
 }
 
-.businesses p {
+.businesses__article p {
   color: $timglas;
   margin: 0;
 
@@ -55,4 +56,6 @@
   }
 }
 
-
+.businesses__article a {
+  color: $timglas;
+}
