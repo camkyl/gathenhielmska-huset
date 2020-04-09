@@ -25,6 +25,8 @@ add_action('admin_menu', 'post_remove');
 require get_template_directory() . "/plate.php";
 require get_template_directory() . "/post-types/event.php";
 require get_template_directory() . "/post-types/news.php";
+require get_template_directory() . "/post-types/images.php";
+require get_template_directory() . "/post-types/videos.php";
 require get_template_directory() . "/taxonomies/program.php";
 require get_template_directory() . "/taxonomies/news.php";
 require get_template_directory() . "/fields/program.php";
@@ -42,7 +44,7 @@ function my_acf_blocks_init()
             'title'             => __('News-template'), // human readable thing
             'description'       => __('Template used for news articles'),
             'render_template'   => 'template-parts/blocks/news/news.php', // important!
-            'icon' => 'dashicons-format-aside', // icon that appears in the editor
+            'icon' => 'format-aside', // icon that appears in the editor
             'keywords' => ['news', 'article'] // to make it more searchable, max 3
         ));
 
@@ -52,7 +54,7 @@ function my_acf_blocks_init()
             'title'             => __('Businesses-template'), // human readable thing
             'description'       => __('Template used to display businesses at Gathenhielmska'),
             'render_template'   => 'template-parts/blocks/businesses/businesses.php', // important!
-            'icon' => 'dashicons-editor-insertmore', // icon that appears in the editor
+            'icon' => 'welcome-write-blog', // icon that appears in the editor
             'keywords' => ['businesses', 'gathenhielmska', 'company'] // to make it more searchable, max 3
         ));
 
@@ -64,6 +66,26 @@ function my_acf_blocks_init()
             'render_template'   => 'template-parts/blocks/events/events.php', // important!
             'icon' => 'dashicons-editor-insertmore', // icon that appears in the editor
             'keywords' => ['events', 'gathenhielmska', 'company'] // to make it more searchable, max 3
+        ));
+
+        // Register archive (images) block.
+        acf_register_block_type(array(
+            'name'              => 'archive-images', // the slug, what is used in code
+            'title'             => __('Template, Archive - videos'), // human readable thing
+            'description'       => __('Template used to display archive of images at Gathenhielmska'),
+            'render_template'   => 'template-parts/blocks/archives/images.php', // important!
+            'icon' => 'format-image', // icon that appears in the editor
+            'keywords' => ['images', 'gathenhielmska', 'photography'] // to make it more searchable, max 3
+        ));
+
+        // Register archive (videos) block.
+        acf_register_block_type(array(
+            'name'              => 'archive-videos', // the slug, what is used in code
+            'title'             => __('Template, Archive - videos'), // human readable thing
+            'description'       => __('Template used to display archive of videos at Gathenhielmska'),
+            'render_template'   => 'template-parts/blocks/archives/videos.php', // important!
+            'icon' => 'video-alt2', // icon that appears in the editor
+            'keywords' => ['videos', 'gathenhielmska'] // to make it more searchable, max 3
         ));
     }
 }
