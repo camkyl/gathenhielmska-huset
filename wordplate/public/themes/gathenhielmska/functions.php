@@ -55,5 +55,15 @@ function my_acf_blocks_init()
             'icon' => 'dashicons-editor-insertmore', // icon that appears in the editor
             'keywords' => ['businesses', 'gathenhielmska', 'company'] // to make it more searchable, max 3
         ));
+
+        // Register event block.
+        acf_register_block_type(array(
+            'name'              => 'events', // the slug, what is used in code
+            'title'             => __('Event-template'), // human readable thing
+            'description'       => __('Template used to display events at Gathenhielmska'),
+            'render_template'   => 'template-parts/blocks/events/events.php', // important!
+            'icon' => 'dashicons-editor-insertmore', // icon that appears in the editor
+            'keywords' => ['events', 'gathenhielmska', 'company'] // to make it more searchable, max 3
+        ));
     }
 }

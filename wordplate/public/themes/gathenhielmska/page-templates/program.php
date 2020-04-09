@@ -9,12 +9,29 @@
 $posts = get_posts($args);
 ?>
 
-<?php foreach ($posts as $post) : ?>
+<?php ?>
 
-    <h2><?php echo $post->post_title; ?></h2>
-    <p><?php echo $post->post_content; ?></p>
+<div class="page-title">
+    <div class="heading-wrapper">
+        <div class="heading-wrapper__left"></div>
+        <h3>Program</h3>
+        <div class="heading-wrapper__right"></div>
+    </div>
+</div>
+
+    <?php foreach ($posts as $post) : setup_postdata($post) ?>
+<section class="events">
+    <p><?php the_category(); ?></p>
+    <p><?php the_content(); ?></p>
+    <button>
+        <a href="<?php the_permalink(); ?>">Läs mer</a>
+    </button>
+</section>
+    <?php endforeach; ?>
 
 
-<?php endforeach; ?>
+
+
+
 
 <?php get_footer(); ?>

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 add_action('init', function () {
-    register_taxonomy('Category', ['program'], [
+    register_taxonomy('program-category', ['program'], [
         'hierarchical' => true,
         'labels' => [
             'add_new_item' => __('Add new category'),

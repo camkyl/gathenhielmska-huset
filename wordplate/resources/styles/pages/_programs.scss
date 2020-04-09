@@ -1,0 +1,34 @@
+.events {
+
+  @extend %flex-center-center;
+  @extend %flex-column;
+
+  width: 100vw;
+
+
+  &__img {
+    width: 100vw;
+  }
+
+  &__wrapper {
+    margin: 0 4vw;
+    width: 92vw;
+
+    &__straight-line {
+      height: 1px;
+      width: 30vw;
+      background-color: $black;
+    }
+  }
+}
+
+.events button {
+  margin: 0 4vw;
+  width: 92vw;
+  padding: 4px;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+
