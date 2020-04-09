@@ -728,7 +728,7 @@ form {
 
 .businesses__content-wrapper {
   width: 90%;
-  padding: 10px 20px;
+  padding: 10px;
 }
 
 @media only screen and (min-width: 830px) {
@@ -744,6 +744,7 @@ form {
   flex-direction: column;
   width: 100%;
   margin-bottom: 12px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -768,17 +769,21 @@ form {
   }
 }
 
-.businesses p {
+.businesses__article p {
   color: #EFDECE;
   margin: 0;
 }
 
-.businesses p.\--title {
+.businesses__article p.\--title {
   font-weight: 700;
 }
 
-.businesses p.\--role {
+.businesses__article p.\--role {
   font-weight: 300;
+}
+
+.businesses__article a {
+  color: #EFDECE;
 }
 
 .heading-wrapper {
