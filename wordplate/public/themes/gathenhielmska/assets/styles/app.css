@@ -610,12 +610,9 @@ a:visited {
   color: #000000;
 }
 
-
+.sponsors,
 .archive__alternatives-images,
 .archive__alternatives-videos,
-
-.sponsors,
-
 .events,
 .landing-page__hero {
   display: flex;
@@ -628,12 +625,9 @@ a:visited {
   flex-direction: column;
 }
 
-
+.footer,
 .archive__images-wrapper,
 .archive,
-
-.footer,
-
 .businesses__content-wrapper,
 .businesses {
   display: flex;
@@ -818,7 +812,6 @@ form {
   border: 1px solid white;
   border-radius: 5px;
 }
-
 
 .archive {
   width: 100vw;
