@@ -4,8 +4,7 @@
   @extend %flex-column;
 
   width: 100vw;
-
-
+  
   &__img {
     width: 100vw;
   }
@@ -20,6 +19,11 @@
       background-color: $black;
     }
   }
+}
+
+.heading-wrapper {
+
+  margin: 0 auto;
 }
 
 .events button {
