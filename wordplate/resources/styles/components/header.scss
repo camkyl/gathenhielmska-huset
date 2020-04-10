@@ -1,9 +1,18 @@
 // The header of the whole website
 
+main {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: $oppethav;
+}
+
 .header {
   width: 100vw;
   max-width: 100vw;
-  // position: fixed;
   z-index: 10;
   display: flex;
   align-items: center;
@@ -29,7 +38,7 @@
     }
 
     &__search {
-      margin-right: 7vw;
+      margin-right: 2vw;
     }
 
     &__hamburger {
@@ -61,13 +70,12 @@
 
 .nav {
   position: absolute;
-  opacity: 0;
   height: 100vh;
   width: 100vw;
   top: 0;
   left: 0;
   background-color: $timglas;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -99,17 +107,29 @@
 }
 
 .nav-active {
-  // transform: translateX(0%);
   opacity: 1;
   z-index: 20;
+  display: flex;
 }
 
-main {
-  overflow-x: hidden;
+.search {
   width: 100vw;
-  // margin-top: 8vh;
+  display: none;
+
+  &__input {
+    width: 100vw;
+    height: 5vh;
+    padding-left: 5vw;
+    background-color: $timglas;
+    border: none;
+  }
 }
 
-body {
-  overflow-x: hidden;
+.search-active {
+  display: block;
+}
+
+.search__input:focus {
+  outline: 1px solid black;
+  border: none;
 }
