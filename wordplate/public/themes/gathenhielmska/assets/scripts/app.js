@@ -93,7 +93,17 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+var burger = document.querySelector(".hamburger");
+var nav = document.querySelector(".nav");
 
+var navSlide = function navSlide() {
+  burger.addEventListener("click", function () {
+    burger.classList.toggle("toggle");
+    nav.classList.toggle("nav-active");
+  });
+};
+
+navSlide(); // console.log(burger);
 
 /***/ }),
 
