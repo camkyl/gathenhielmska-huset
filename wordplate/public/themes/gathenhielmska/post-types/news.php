@@ -17,21 +17,8 @@ add_action('init', function () {
         'supports' => [
             'title',
             'editor',
-            // 'thumbnail',
         ],
         'menu_position' => 10,
         'public' => true,
-        // 'template' => [
-        //     ['core/image', [
-        //         'attributes' => [
-        //             'selector' => 'left',
-        //         ]
-        //         //
-        //     ]],
-        //     ['core/paragraph', [
-        //         'placeholder' => 'Add a your news article here',
-        //     ]],
-        // ],
-        // 'template_lock' => 'all', // read more about options here under "Lockings": https://developer.wordpress.org/block-editor/developers/block-api/block-templates/
     ]);
 });
