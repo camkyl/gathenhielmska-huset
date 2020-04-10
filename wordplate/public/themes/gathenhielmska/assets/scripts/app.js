@@ -94,9 +94,16 @@
 /***/ (function(module, exports) {
 
 var burger = document.querySelector(".hamburger");
-burger.addEventListener("click", function () {
-  burger.classList.toggle("toggle");
-}); // console.log(burger);
+var nav = document.querySelector(".nav");
+
+var navSlide = function navSlide() {
+  burger.addEventListener("click", function () {
+    burger.classList.toggle("toggle");
+    nav.classList.toggle("nav-active");
+  });
+};
+
+navSlide(); // console.log(burger);
 
 /***/ }),
 

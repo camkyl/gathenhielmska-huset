@@ -28,9 +28,9 @@
             <img class="header__right__flag" src="../../icons/swedishflag.png">
 
             <div class="hamburger header__right__hamburger">
-                <div class="hamburger-line header__right__hamburger__line1"></div>
-                <div class="hamburger-line header__right__hamburger__line2"></div>
-                <div class="hamburger-line header__right__hamburger__line3"></div>
+                <div class="hamburger-line1 header__right__hamburger__line1"></div>
+                <div class="hamburger-line2 header__right__hamburger__line2"></div>
+                <div class="hamburger-line3 header__right__hamburger__line3"></div>
             </div>
 
             <nav class="nav">
