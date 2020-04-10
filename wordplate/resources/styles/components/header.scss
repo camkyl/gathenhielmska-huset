@@ -2,23 +2,77 @@
 
 .header {
   width: 100vw;
-  @extend %flex-just-sp-bet;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $timglas;
+  height: 8vh;
 
   &__left {
-    background-color: rgb(199, 199, 199);
+    margin-left: 5vw;
   }
 
   &__right {
     @extend %flex-just-sp-bet;
+    height: 8vh;
+
+    &__flag {
+      margin-right: 7vw;
+    }
+
+    &__arrow {
+      margin-right: 2vw;
+    }
+
+    &__search {
+      margin-right: 7vw;
+    }
+
+    &__hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 8vh;
+      margin-right: 5vw;
+
+      &__line2,
+      &__line3 {
+        height: 3px;
+        width: 7vw;
+        margin-top: 5px;
+        background-color: black;
+        border-radius: 1px;
+      }
+
+      &__line1 {
+        height: 3px;
+        width: 7vw;
+        background-color: black;
+        border-radius: 1px;
+      }
+    }
   }
 }
 
 .nav {
-  margin: 10px;
+  position: absolute;
+  height: 92vh;
+  width: 100vw;
+  right: 0;
+  top: 0;
+  background-color: $timglas;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in;
+  transform: translateX(100%);
+  z-index: -1;
 }
 
 .nav ul {
   display: flex;
+  flex-direction: column;
 }
 
 .nav ul li {
@@ -27,5 +81,6 @@
 
 .main {
   width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
-

@@ -93,7 +93,10 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+var burger = document.querySelector(".hamburger");
+burger.addEventListener("click", function () {
+  burger.classList.toggle("toggle");
+}); // console.log(burger);
 
 /***/ }),
 
@@ -115,8 +118,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/cks/Documents/GitHub/gathenhielmska-huset/wordplate/resources/scripts/app.js */"./resources/scripts/app.js");
-module.exports = __webpack_require__(/*! /Users/cks/Documents/GitHub/gathenhielmska-huset/wordplate/resources/styles/app.scss */"./resources/styles/app.scss");
+__webpack_require__(/*! /Users/thomas/Desktop/GitHub/gathenhielmska-huset/wordplate/resources/scripts/app.js */"./resources/scripts/app.js");
+module.exports = __webpack_require__(/*! /Users/thomas/Desktop/GitHub/gathenhielmska-huset/wordplate/resources/styles/app.scss */"./resources/styles/app.scss");
 
 
 /***/ })
