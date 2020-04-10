@@ -681,6 +681,16 @@ form {
 @import 'not-found';
 */
 
+main {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #2f3e46;
+}
+
 .header {
   width: 100vw;
   max-width: 100vw;
@@ -710,7 +720,7 @@ form {
 }
 
 .header__right__search {
-  margin-right: 7vw;
+  margin-right: 2vw;
 }
 
 .header__right__hamburger {
@@ -740,13 +750,12 @@ form {
 
 .nav {
   position: absolute;
-  opacity: 0;
   height: 100vh;
   width: 100vw;
   top: 0;
   left: 0;
   background-color: #EFDECE;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -780,15 +789,29 @@ form {
 .nav-active {
   opacity: 1;
   z-index: 20;
+  display: flex;
 }
 
-main {
-  overflow-x: hidden;
+.search {
   width: 100vw;
+  display: none;
 }
 
-body {
-  overflow-x: hidden;
+.search__input {
+  width: 100vw;
+  height: 5vh;
+  padding-left: 5vw;
+  background-color: #EFDECE;
+  border: none;
+}
+
+.search-active {
+  display: block;
+}
+
+.search__input:focus {
+  outline: 1px solid black;
+  border: none;
 }
 
 /* Import all pages */

@@ -95,11 +95,16 @@
 
 var burger = document.querySelector(".hamburger");
 var nav = document.querySelector(".nav");
+var search = document.querySelector(".search");
+var searchIcon = document.querySelector(".search-icon");
 
 var navSlide = function navSlide() {
   burger.addEventListener("click", function () {
     burger.classList.toggle("toggle");
     nav.classList.toggle("nav-active");
+  });
+  searchIcon.addEventListener("click", function () {
+    search.classList.toggle("search-active");
   });
 };
 

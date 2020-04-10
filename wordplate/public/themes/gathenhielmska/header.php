@@ -23,7 +23,7 @@
 
         <div class="header__right">
 
-            <img class="header__right__search" src="../../icons/search-icon.svg">
+            <img class="search-icon header__right__search" src="../../icons/search-icon.svg">
             <img class="header__right__arrow" src="../../icons/downarrow.png">
             <img class="header__right__flag" src="../../icons/swedishflag.png">
 
@@ -46,5 +46,11 @@
             </nav>
         </div>
     </header>
+
+    <div class="search">
+        <form class="search__form" action="/" method="get">
+            <input class="search__input" placeholder="VAD SÖKER DU?" type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
+        </form>
+    </div>
 
     <main class="main">
