@@ -29,9 +29,4 @@ $posts = get_posts($args);
 </section>
     <?php endforeach; ?>
 
-
-
-
-
-
 <?php get_footer(); ?>

@@ -1,0 +1,71 @@
+// The footer of the whole website
+ .footer {
+   width: 100vw;
+   min-height: 100vh;
+   margin: 0 auto;
+   background-color: $adelsblod;
+   @extend %flex-col-cen;
+
+    @include respond-to(wide-screens) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+   &__links_wrapper {
+     display: flex;
+     justify-content: center;
+     width: 100%;
+     justify-content: space-between;
+     margin-top: 5vh;
+
+     &__left, __right {
+       width: 46vw;
+     }
+
+     &__left {
+       margin-left: 4vw;
+     }
+
+     &__right {
+       margin-right: 4vw;
+     }
+
+     &__right__space {
+       margin-top: 8vh;
+     }
+
+
+   }
+
+   &__straight-line {
+     height: 1px;
+     margin: 0 auto;
+     width: 92vw;
+     background-color: black;
+   }
+
+ }
+
+.sponsors {
+
+  @extend %flex-center-center;
+  width: 92vw;
+  margin: 3vh 0 0 0;
+  justify-content: space-between;
+
+  &__image {
+    width: 20%;
+    height: auto;
+    margin-left: 2vw;
+  }
+
+  &__text p {
+    margin: 0;
+    font-size: 0.65rem;
+  }
+
+}
+
+a {
+  text-decoration: none;
+}
