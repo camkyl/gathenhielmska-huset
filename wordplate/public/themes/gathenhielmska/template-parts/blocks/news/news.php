@@ -15,7 +15,10 @@ $news = get_field('article');
     <img src="<?php echo $image['url']; ?>" alt="test">
 </div>
 <div class="news__article-content">
-    <p class="date"><?php the_date(); ?></p>
+    <div class="date">
+        <p class="date__published">Publicerad</p>
+        <p class="date__date"><?php the_date(); ?></p>
+    </div>
     <h4><?php the_title(); ?></h4>
     <p><?php echo $news; ?></p>
     <a href="<?php the_permalink(); ?>">Läs mer</a>

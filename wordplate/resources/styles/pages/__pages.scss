@@ -30,5 +30,9 @@
 .heading-wrapper h3 {
   color: $timglas;
   margin: 14px;
+
+  @include respond-to(wide-screens) {
+    margin: 20px;
+  }
 }
 
