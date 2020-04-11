@@ -8,16 +8,15 @@
 $image = get_field('image');
 $news = get_field('article');
 // Categories seems to have a bug somewhere, maybe has to do with the error messages in the dashboard
-$categories = get_field('category');
+// $categories = get_field('category');
 
 ?>
-
-<article>
+<div class="news__article-img">
     <img src="<?php echo $image['url']; ?>" alt="test">
+</div>
+<div class="news__article-content">
+    <p class="date"><?php the_date(); ?></p>
+    <h4><?php the_title(); ?></h4>
     <p><?php echo $news; ?></p>
-    <p><?php //var_dump($categories);
-        ?></p>
-    <?php foreach ($categories as $category) : ?>
-        <p><?php echo $category->name; ?></p>
-    <?php endforeach; ?>
-</article>
+    <a href="<?php the_permalink(); ?>">Läs mer</a>
+</div>
