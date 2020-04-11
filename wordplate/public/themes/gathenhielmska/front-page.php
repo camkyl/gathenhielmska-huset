@@ -2,50 +2,87 @@
 
 <section class="landing-page">
 
-    <div class="landing-page__hero">
+    <section class="landing-page__hero">
         <h1>Gathenhielmska</h1>
-        <p>This is where the hero image will be. </p>
-    </div>
+    </section>
 
-    <div class="landing-page__program">
-        <h2>Program</h2>
-        <p>Program listed here</p>
-    </div>
+    <section class="landing-page__program">
+        <div class="landing-page__program__wrapper">
+            <div class="heading-wrapper">
+                <div class="heading-wrapper__left"></div>
+                <h3>Program</h3>
+                <div class="heading-wrapper__right"></div>
+            </div>
 
-    <div class="landing-page__about">
-        <h2>ett hus ur tiden i tiden</h2>
+            <p>Program listed here</p>
 
-        <p>
-            Vi är ett kulturarv som trots tidens gång förblir lika levande idag.
-            Vi öppnar upp och bjuder in till en fristad där människor kan mötas, inspireras och skapa.
-            Vi hyllar vårt ursprung, omfamnar det okända och står som en symbol för tidlös kreativitet i mötet mellandåtid, samtid och framtid.
-        </p>
-    </div>
+            <?php
 
-    <div class="landing-page__news">
-        <h2>News</h2>
-        <article>
-            <h3>title of news</h3>
-            <p>text pf news</p>
-            <p>image of news</p>
-        </article>
-    </div>
+            $args = [
+                'post_type' => 'program',
+                //'category' => 'Teater'
+            ];
 
-    <?php
+            $music = get_posts($args);
 
-    $args = [
-        'post_type' => 'program',
-        "category" => "Teater"
-    ];
+            foreach ($music as $post) {
+                echo $post->post_title;
+                echo $post->post_content;
+            }
 
-    $music = get_posts($args);
+            ?>
 
-    foreach ($music as $post) {
-        echo $post->post_title;
-        echo $post->post_content;
-    }
+            <div class="landing-page__button-wrapper">
+                <a href="<?php the_permalink(); ?>">
+                    <button>Se hela programmet</button>
+                </a>
+            </div>
+        </div>
+    </section>
 
-    ?>
+    <section class="landing-page__about">
+        <div class="landing-page__about__wrapper">
+            <h3>Ett hus ur tiden i tiden</h3>
+
+            <p>
+                Vi är ett kulturarv som trots tidens gång förblir lika levande idag. Vi öppnar upp och bjuder in till en fristad där människor kan mötas, inspireras och skapa.
+            </p>
+            <p>
+                Vi hyllar vårt ursprung, omfamnar det okända och står som en symbol för tidlös kreativitet i mötet mellandåtid, samtid och framtid.
+            </p>
+
+            <div class="landing-page__button-wrapper">
+                <a href="<?php echo get_bloginfo('url'); ?>/om-huset">
+                    <button>Läs mer om huset</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="landing-page__news">
+        <div class="landing-page__news__wrapper">
+            <div class="heading-wrapper">
+                <div class="heading-wrapper__left"></div>
+                <h3>Nyheter</h3>
+                <div class="heading-wrapper__right"></div>
+            </div>
+
+            <?php $args = ['post_type' => 'news']; ?>
+            <?php $news = get_posts($args); ?>
+
+            <?php foreach ($news as $post) : setup_postdata($post) ?>
+                <article>
+                    <?php the_content(); ?>
+                </article>
+            <?php endforeach; ?>
+
+            <div class="landing-page__button-wrapper">
+                <a href="<?php echo get_bloginfo('url'); ?>/news">
+                    <button>Läs fler nyheter</button>
+                </a>
+            </div>
+        </div>
+    </section>
 </section>
 
 <?php get_footer(); ?>
