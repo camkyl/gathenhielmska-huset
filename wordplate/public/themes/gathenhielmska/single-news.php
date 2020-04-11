@@ -1,22 +1,14 @@
-<?php
-// This template is used when a visitor requests a single post from the news post type.
-?>
-
 <?php get_header(); ?>
 
-<section>
-    <p>single-news.php</p>
-
+<section class="single-news">
     <?php if (have_posts()) : ?>
 
         <?php while (have_posts()) : the_post(); ?>
-
-            <p>Publicerad <?php the_date(); ?></p>
-
-            <h2><?php the_title(); ?></h2>
-
+            <div class="single-news__title">
+                <h3>Aktuellt</h3>
+            </div>
             <!--the_content() is what's in template-parts/blocks/news/news.php-->
-            <p><?php the_content(); ?></p>
+            <?php the_content(); ?>
 
         <?php endwhile; ?>
 
