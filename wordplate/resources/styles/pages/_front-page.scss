@@ -2,13 +2,124 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-  background-color: rgb(199, 199, 199);
+  background-color: $oppethav;
 
   &__hero {
     @extend %flex-center-center;
     width: 100%;
-    height: 80vh;
-    padding: 50px;
+    height: 100vh;
+    padding: 10px;
     background-color: rgb(151, 151, 151);
+    background: url('hero-front.jpg') no-repeat center center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 3000px rgba(50, 62, 69, 0.3);
+  }
+
+  & h1 {
+    @include respond-to(wide-screens) {
+      font-size: 4.6rem;
+    }
+  }
+
+  &__program {
+    @extend %flex-col-cen;
+
+    &__wrapper {
+      width: 90vw;
+      padding-bottom: 40px;
+
+      @include respond-to(wide-screens) {
+        width: 60vw;
+      }
+    }
+  }
+
+  &__about {
+    @extend %flex-col-cen;
+    background: url('house-about.jpg') no-repeat center center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 3000px rgba(50, 62, 69, 0.86);
+
+    @include respond-to(wide-screens) {
+      height: 70vh;
+      justify-content: center;
+    }
+
+    &__wrapper {
+      width: 90vw;
+      padding-bottom: 30px;
+
+      @include respond-to(wide-screens) {
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+    }
+
+    & h3 {
+      font-family: $newsHeadings;
+      font-weight: 700;
+      font-size: 1.9rem;
+      text-transform: none;
+
+      @include respond-to(wide-screens) {
+        font-size: 2.6rem;
+      }
+    }
+
+    & p {
+      @include respond-to(wide-screens) {
+        text-align: center;
+        padding: 0 100px;
+      }
+    }
+
+    & a {
+      @include respond-to(wide-screens) {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &__news {
+    @extend %flex-col-cen;
+
+    &__wrapper {
+      width: 90vw;
+      padding-bottom: 40px;
+
+      @include respond-to(wide-screens) {
+        width: 60vw;
+      }
+    }
+
+    &__wrapper article {
+      width: 100%;
+      @extend %flex-col-cen;
+    }
+
+    &__wrapper .news__article-img,
+    &__wrapper .news__article-content {
+      width: 90vw;
+    }
+  }
+}
+
+/* Styling for all buttons at front page */
+.landing-page__button-wrapper {
+  width: 100%;
+  @extend %flex-center-center;
+
+  & button {
+    color: $timglas;
+    font-family: $lato;
+    font-size: 0.75rem;
+    border: 1px solid $timglas;
+    border-radius: 7px;
+    background: none;
+    padding: 10px 16px;
+    margin: 20px;
   }
 }

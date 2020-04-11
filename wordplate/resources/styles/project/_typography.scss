@@ -6,12 +6,16 @@
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: $headings;
+h1 {
+  font-family: $newsHeadings;
+  font-size: 2.6rem;
+  color: $timglas;
+  margin: 0;
 }
 
-h1 {
-  font-size: 3rem;
+h2, h3, h4, h5, h6 {
+  font-family: $headings;
+  color: $timglas;
 }
 
 h2 {
@@ -27,6 +31,7 @@ h3 {
 p {
   font-size: 1rem;
   font-family: $text;
+  color: $timglas;
 }
 
 a, a:visited {
