@@ -31,9 +31,9 @@
     <div class="archive__images">
         <?php foreach ($images as $post) :  setup_postdata($post) ?>
             <article class="archive__images--single-image">
-                <!--the_content styrs av template-parts/blocks/news/news.php-->
+                <!--the_content styrs av template-parts/blocks/archives/images.php-->
                 <a href="<?php the_permalink(); ?>">
-                    <div><?php the_content(); ?></div>
+                    <?php the_content(); ?>
                 </a>
             </article>
         <?php endforeach; ?>
