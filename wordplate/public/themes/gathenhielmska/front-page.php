@@ -20,7 +20,9 @@
 
             $args = [
                 'post_type' => 'program',
-                //'category' => 'Teater'
+                'numberposts' => 2, // change number
+                'order' => 'desc'
+                // 'category' => ''
             ];
 
             $music = get_posts($args);
@@ -60,18 +62,20 @@
     </section>
 
     <section class="landing-page__news">
-        <div class="landing-page__news__wrapper">
+        <!--using same styling as in news page-->
+        <div class="news">
             <div class="heading-wrapper">
                 <div class="heading-wrapper__left"></div>
                 <h3>Nyheter</h3>
                 <div class="heading-wrapper__right"></div>
             </div>
 
-            <?php $args = ['post_type' => 'news']; ?>
+            <?php $args = ['post_type' => 'news', 'numberposts' => 2, 'order' => 'desc']; ?>
             <?php $news = get_posts($args); ?>
 
             <?php foreach ($news as $post) : setup_postdata($post) ?>
-                <article>
+                <!--using same styling as in news page-->
+                <article class="news__article">
                     <?php the_content(); ?>
                 </article>
             <?php endforeach; ?>

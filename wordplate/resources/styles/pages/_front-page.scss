@@ -86,6 +86,7 @@
   &__news {
     @extend %flex-col-cen;
 
+    /*
     &__wrapper {
       width: 90vw;
       padding-bottom: 40px;
@@ -104,6 +105,7 @@
     &__wrapper .news__article-content {
       width: 90vw;
     }
+    */
   }
 }
 
