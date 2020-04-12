@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<?php $imgArgs = ['post_type' => 'images']; ?>
+<?php $imgArgs = ['post_type' => 'images', 'numberposts' => '-1']; ?>
 <?php $images = get_posts($imgArgs); ?>
 
 <?php $vidArgs = ['post_type' => 'videos']; ?>
@@ -29,12 +29,11 @@
     ?>
 
     <div class="archive__images">
+
         <?php foreach ($images as $post) :  setup_postdata($post) ?>
             <article class="archive__images--single-image">
                 <!--the_content styrs av template-parts/blocks/archives/images.php-->
-                <a href="<?php the_permalink(); ?>">
-                    <?php the_content(); ?>
-                </a>
+                <?php the_content(); ?>
             </article>
         <?php endforeach; ?>
     </div>
