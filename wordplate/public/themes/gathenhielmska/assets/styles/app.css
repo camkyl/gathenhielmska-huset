@@ -639,7 +639,6 @@ a:visited {
 .news,
 .businesses__content-wrapper,
 .businesses,
-.landing-page__news__wrapper article,
 .landing-page__news,
 .landing-page__about,
 .landing-page__program {
@@ -916,24 +915,27 @@ body {
   }
 }
 
-.landing-page__news__wrapper {
-  width: 90vw;
-  padding-bottom: 40px;
-}
+.landing-page__news {
+  /*
+  &__wrapper {
+    width: 90vw;
+    padding-bottom: 40px;
 
-@media only screen and (min-width: 830px) {
-  .landing-page__news__wrapper {
-    width: 60vw;
+    @include respond-to(wide-screens) {
+      width: 60vw;
+    }
   }
-}
 
-.landing-page__news__wrapper article {
-  width: 100%;
-}
+  &__wrapper article {
+    width: 100%;
+    @extend %flex-col-cen;
+  }
 
-.landing-page__news__wrapper .news__article-img,
-.landing-page__news__wrapper .news__article-content {
-  width: 90vw;
+  &__wrapper .news__article-img,
+  &__wrapper .news__article-content {
+    width: 90vw;
+  }
+  */
 }
 
 /* Styling for all buttons at front page */
