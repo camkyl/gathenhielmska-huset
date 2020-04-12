@@ -71,7 +71,7 @@ function my_acf_blocks_init()
         // Register archive (images) block.
         acf_register_block_type(array(
             'name'              => 'archive-images', // the slug, what is used in code
-            'title'             => __('Template, Archive - videos'), // human readable thing
+            'title'             => __('Template, Archive - images'), // human readable thing
             'description'       => __('Template used to display archive of images at Gathenhielmska'),
             'render_template'   => 'template-parts/blocks/archives/images.php', // important!
             'icon' => 'format-image', // icon that appears in the editor
