@@ -2,6 +2,8 @@
 
 <?php get_header(); ?>
 
+
+
 <!--The content in the admin page-->
 <?php if (have_posts()) : ?>
 
@@ -14,5 +16,6 @@
     <?php endwhile; ?>
 
 <?php endif; ?>
+
 
 <?php get_footer(); ?>

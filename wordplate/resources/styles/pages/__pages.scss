@@ -1,12 +1,12 @@
 /* Import all pages */
 
-@import 'front-page';
-@import 'businesses';
-@import 'news';
+@import "front-page";
+@import "businesses";
+@import "news";
 @import "programs";
-@import 'archive';
-@import 'footer';
-
+@import "archive";
+@import "footer";
+@import "about-us";
 
 // The horizontal lines besides the headings
 .heading-wrapper {
@@ -34,4 +34,3 @@
     margin: 20px;
   }
 }
-

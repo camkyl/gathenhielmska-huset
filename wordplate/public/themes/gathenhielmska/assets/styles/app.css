@@ -1464,6 +1464,23 @@ a {
   text-decoration: none;
 }
 
+.about-us {
+  width: 92vw;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.about-us__para {
+  margin-top: 0;
+}
+
+.about-us__img {
+  width: 100%;
+  height: auto;
+  margin: 5vh 0;
+}
+
 .heading-wrapper {
   display: flex;
   align-items: center;

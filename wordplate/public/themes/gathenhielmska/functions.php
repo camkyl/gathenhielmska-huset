@@ -87,5 +87,15 @@ function my_acf_blocks_init()
             'icon' => 'video-alt2', // icon that appears in the editor
             'keywords' => ['videos', 'gathenhielmska'] // to make it more searchable, max 3
         ));
+
+        // Register about us block.
+        acf_register_block_type(array(
+            'name'              => 'about-us', // the slug, what is used in code
+            'title'             => __('Template, About us'), // human readable thing
+            'description'       => __('Template used to display information about at Gathenhielmska'),
+            'render_template'   => 'template-parts/blocks/about-us/about-us.php', // important!
+            'icon' => 'video-alt2', // icon that appears in the editor
+            'keywords' => ['about', 'gathenhielmska'] // to make it more searchable, max 3
+        ));
     }
 }
