@@ -9,7 +9,6 @@ const langMenu = document.querySelector(".flag-menu");
 
 const navSlide = () => {
   burger.addEventListener("click", () => {
-
     if (burger.classList.contains("toggle")) {
       burger.classList.remove("toggle");
       nav.classList.remove("nav-active");
@@ -19,8 +18,6 @@ const navSlide = () => {
       burger.classList.toggle("toggle");
       nav.classList.toggle("nav-active");
     }
-
-
   })
 
   searchIcon.addEventListener("click", () => {
@@ -36,8 +33,6 @@ const navSlide = () => {
   })
 
 }
-
-
 
 navSlide();
 

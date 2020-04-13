@@ -1266,20 +1266,38 @@ body {
 .events__wrapper__straight-line {
   height: 1px;
   width: 30vw;
-  background-color: #000000;
+  background-color: #EFDECE;
 }
 
-.heading-wrapper {
-  margin: 0 auto;
+.events__wrapper__category {
+  text-transform: uppercase;
+  margin: 0 0 2vh 0;
+}
+
+.events__wrapper__title {
+  margin-bottom: 0;
+}
+
+.events__wrapper__date {
+  margin-top: 0;
+}
+
+.page-title div {
+  margin: 3vh auto;
 }
 
 .events button {
   margin: 0 4vw;
   width: 92vw;
-  padding: 4px;
+  padding: 10px;
   text-decoration: none;
-  border: 1px solid white;
-  border-radius: 5px;
+  border: 1px solid #EFDECE;
+  border-radius: 7px;
+  background-color: #2f3e46;
+}
+
+.events button a {
+  color: #EFDECE;
 }
 
 .archive {

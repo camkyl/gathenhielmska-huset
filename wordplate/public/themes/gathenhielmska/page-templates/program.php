@@ -19,14 +19,14 @@ $posts = get_posts($args);
     </div>
 </div>
 
-    <?php foreach ($posts as $post) : setup_postdata($post) ?>
-<section class="events">
-    <p><?php the_category(); ?></p>
-    <p><?php the_content(); ?></p>
-    <button>
-        <a href="<?php the_permalink(); ?>">Läs mer</a>
-    </button>
-</section>
-    <?php endforeach; ?>
+<?php foreach ($posts as $post) : setup_postdata($post) ?>
+    <section class="events">
+        <p><?php the_category(); ?></p>
+        <p><?php the_content(); ?></p>
+        <button>
+            <a href="<?php the_permalink(); ?>">Läs mer</a>
+        </button>
+    </section>
+<?php endforeach; ?>
 
 <?php get_footer(); ?>

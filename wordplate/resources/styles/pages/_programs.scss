@@ -1,5 +1,4 @@
 .events {
-
   @extend %flex-center-center;
   @extend %flex-column;
 
@@ -16,23 +15,38 @@
     &__straight-line {
       height: 1px;
       width: 30vw;
-      background-color: $black;
+      background-color: $timglas;
+    }
+
+    &__category {
+      text-transform: uppercase;
+      margin: 0 0 2vh 0;
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+
+    &__date {
+      margin-top: 0;
     }
   }
 }
 
-.heading-wrapper {
-
-  margin: 0 auto;
+.page-title div {
+  margin: 3vh auto;
 }
 
 .events button {
   margin: 0 4vw;
   width: 92vw;
-  padding: 4px;
+  padding: 10px;
   text-decoration: none;
-  border: 1px solid white;
-  border-radius: 5px;
+  border: 1px solid $timglas;
+  border-radius: 7px;
+  background-color: $oppethav;
 }
 
-
+.events button a {
+  color: $timglas;
+}
