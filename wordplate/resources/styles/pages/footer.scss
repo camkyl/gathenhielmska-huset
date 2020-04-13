@@ -1,56 +1,61 @@
 // The footer of the whole website
- .footer {
-   width: 100vw;
-   min-height: 100vh;
-   margin: 0 auto;
-   background-color: $adelsblod;
-   @extend %flex-col-cen;
+.footer {
+  width: 100vw;
+  // min-height: 100vh;
+  margin: 0 auto;
+  background-color: $adelsblod;
+  @extend %flex-col-cen;
 
-    @include respond-to(wide-screens) {
-      flex-direction: row;
-      justify-content: space-between;
+  @include respond-to(wide-screens) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__links_wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 5vh;
+
+    &__left,
+    __right {
+      width: 46vw;
     }
 
-   &__links_wrapper {
-     display: flex;
-     justify-content: center;
-     width: 100%;
-     justify-content: space-between;
-     margin-top: 5vh;
+    &__left {
+      margin-left: 4vw;
+    }
 
-     &__left, __right {
-       width: 46vw;
-     }
+    &__right {
+      margin-right: 4vw;
+    }
 
-     &__left {
-       margin-left: 4vw;
-     }
+    &__right__space {
+      margin-top: 8vh;
+    }
+  }
 
-     &__right {
-       margin-right: 4vw;
-     }
+  &__straight-line {
+    height: 1px;
+    margin: 0 auto;
+    width: 92vw;
+    background-color: $timglas;
+  }
+}
 
-     &__right__space {
-       margin-top: 8vh;
-     }
+.footer__links_wrapper__left p a {
+  color: $timglas;
+}
 
-
-   }
-
-   &__straight-line {
-     height: 1px;
-     margin: 0 auto;
-     width: 92vw;
-     background-color: black;
-   }
-
- }
+.footer__links_wrapper__right p a {
+  color: $timglas;
+}
 
 .sponsors {
-
   @extend %flex-center-center;
   width: 92vw;
-  margin: 3vh 0 0 0;
+  margin: 3vh 0 3vh 0;
   justify-content: space-between;
 
   &__image {
@@ -63,7 +68,6 @@
     margin: 0;
     font-size: 0.65rem;
   }
-
 }
 
 a {

@@ -1354,7 +1354,6 @@ body {
 
 .footer {
   width: 100vw;
-  min-height: 100vh;
   margin: 0 auto;
   background-color: #23405E;
 }
@@ -1395,12 +1394,20 @@ body {
   height: 1px;
   margin: 0 auto;
   width: 92vw;
-  background-color: black;
+  background-color: #EFDECE;
+}
+
+.footer__links_wrapper__left p a {
+  color: #EFDECE;
+}
+
+.footer__links_wrapper__right p a {
+  color: #EFDECE;
 }
 
 .sponsors {
   width: 92vw;
-  margin: 3vh 0 0 0;
+  margin: 3vh 0 3vh 0;
   justify-content: space-between;
 }
 
