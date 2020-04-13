@@ -25,7 +25,7 @@
 
             <img class="search-icon header__right__search" src="../../icons/search-icon.svg">
             <img class="header__right__arrow" src="../../icons/downarrow.png">
-            <img class="header__right__flag" src="../../icons/swedishflag.png">
+            <img class="header__right__flag languages" src="../../icons/swedishflag.png">
 
             <div class="hamburger header__right__hamburger">
                 <div class="hamburger-line1 header__right__hamburger__line1"></div>
@@ -44,6 +44,15 @@
                     <?php endforeach; ?>
                 </ul>
             </nav>
+            <div class="flag-menu">
+                <ul class="nav-ul nav-language">
+                    <li>Svenska</li>
+                    <li>English</li>
+                    <li>Español</li>
+                    <li>Francais</li>
+                    <li>Deutsch</li>
+                </ul>
+            </div>
         </div>
     </header>
 
