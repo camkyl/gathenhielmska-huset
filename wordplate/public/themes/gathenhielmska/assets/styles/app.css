@@ -803,7 +803,7 @@ body {
 }
 
 .toggle .hamburger-line3 {
-  transform: rotate(45deg) translate(-5px, -5px);
+  transform: rotate(45deg) translate(-6px, -5px);
 }
 
 .nav-active {
@@ -1251,6 +1251,7 @@ body {
 }
 
 .events {
+  justify-content: space-between;
   width: 100vw;
 }
 
@@ -1298,6 +1299,16 @@ body {
 
 .events button a {
   color: #EFDECE;
+}
+
+.single-program {
+  position: relative;
+  overflow-y: hidden;
+}
+
+.single-program .events__img {
+  overflow-y: hidden;
+  object-position: center center;
 }
 
 .archive {

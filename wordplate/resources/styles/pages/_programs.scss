@@ -1,6 +1,7 @@
 .events {
   @extend %flex-center-center;
   @extend %flex-column;
+  justify-content: space-between;
 
   width: 100vw;
 
@@ -49,4 +50,16 @@
 
 .events button a {
   color: $timglas;
+}
+
+// single-program.php
+
+.single-program {
+  position: relative;
+  overflow-y: hidden;
+}
+
+.single-program .events__img {
+  overflow-y: hidden;
+  object-position: center center;
 }
