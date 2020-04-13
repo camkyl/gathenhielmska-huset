@@ -11,7 +11,8 @@
     "require": {
         "php": "^7.2",
         "wordplate/framework": "^8.0",
-        "wordplate/plate": "^6.0"
+        "wordplate/plate": "^6.0",
+        "wpackagist-plugin/ninja-forms": "3.4.24.1"
     },
     "config": {
         "optimize-autoloader": true,

@@ -1481,6 +1481,59 @@ a {
   margin: 5vh 0;
 }
 
+.nf-form-fields-required {
+  display: none;
+}
+
+.form .nf-form-content {
+  padding: 0;
+}
+
+.form {
+  width: 92vw;
+  margin: 0 auto;
+}
+
+.form__name {
+  width: 30px;
+}
+
+#nf-field-8 {
+  width: 92vw;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 7px;
+}
+
+.in-charge-wrapper {
+  width: 92vw;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.in-charge-wrapper__team {
+  display: flex;
+}
+
+.in-charge-wrapper__team__left,
+.in-charge-wrapper__team__right {
+  width: 46vw;
+}
+
+.in-charge-wrapper__team__right {
+  align-self: center;
+}
+
+.in-charge-wrapper__team__right img {
+  width: 100%;
+  align-self: center;
+}
+
+.in-charge-wrapper__team p {
+  font-size: 0.8rem;
+}
+
 .heading-wrapper {
   display: flex;
   align-items: center;
