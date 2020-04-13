@@ -603,6 +603,10 @@ h3 {
   font-weight: lighter;
 }
 
+li {
+  font-family: "Muli", sans-serif;
+}
+
 p {
   font-size: 1rem;
   font-family: "Muli", sans-serif;
@@ -727,11 +731,7 @@ body {
 }
 
 .header__right__arrow {
-  margin-right: 2vw;
-}
-
-.header__right__search {
-  margin-right: 2vw;
+  margin: 0 2vw;
 }
 
 .header__right__hamburger {
@@ -759,7 +759,8 @@ body {
   border-radius: 1px;
 }
 
-.nav {
+.nav,
+.flag-menu {
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -775,11 +776,19 @@ body {
   z-index: 2;
 }
 
-.nav ul li {
-  margin: 5px;
+.nav-language li:nth-child(1) {
+  border: 1px solid black;
+  border-radius: 7px;
 }
 
-.hamburger-line1,
+.nav ul li,
+.nav-ul li {
+  margin: 2vh 0;
+  text-transform: uppercase;
+  padding: 6px 25px;
+}
+
+.nav-language .hamburger-line1,
 .hamburger-line2,
 .hamburger-line3 {
   transition: all 0.3s ease;
@@ -1354,7 +1363,6 @@ body {
 
 .footer {
   width: 100vw;
-  min-height: 100vh;
   margin: 0 auto;
   background-color: #23405E;
 }
@@ -1395,12 +1403,20 @@ body {
   height: 1px;
   margin: 0 auto;
   width: 92vw;
-  background-color: black;
+  background-color: #EFDECE;
+}
+
+.footer__links_wrapper__left p a {
+  color: #EFDECE;
+}
+
+.footer__links_wrapper__right p a {
+  color: #EFDECE;
 }
 
 .sponsors {
   width: 92vw;
-  margin: 3vh 0 0 0;
+  margin: 3vh 0 3vh 0;
   justify-content: space-between;
 }
 

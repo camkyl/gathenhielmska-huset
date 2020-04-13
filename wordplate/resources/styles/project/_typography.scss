@@ -13,7 +13,11 @@ h1 {
   margin: 0;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $headings;
   color: $timglas;
 }
@@ -28,14 +32,18 @@ h3 {
   font-weight: lighter;
 }
 
+li {
+  font-family: $text;
+}
+
 p {
   font-size: 1rem;
   font-family: $text;
   color: $timglas;
 }
 
-a, a:visited {
+a,
+a:visited {
   font-family: $text;
   color: $black;
 }
-

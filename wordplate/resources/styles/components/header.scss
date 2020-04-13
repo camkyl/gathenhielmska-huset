@@ -34,11 +34,7 @@ body {
     }
 
     &__arrow {
-      margin-right: 2vw;
-    }
-
-    &__search {
-      margin-right: 2vw;
+      margin: 0 2vw;
     }
 
     &__hamburger {
@@ -68,7 +64,8 @@ body {
   }
 }
 
-.nav {
+.nav,
+.flag-menu {
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -84,11 +81,19 @@ body {
   z-index: 2;
 }
 
-.nav ul li {
-  margin: 5px;
+.nav-language li:nth-child(1) {
+  border: 1px solid black;
+  border-radius: 7px;
 }
 
-.hamburger-line1,
+.nav ul li,
+.nav-ul li {
+  margin: 2vh 0;
+  text-transform: uppercase;
+  padding: 6px 25px;
+}
+
+.nav-language .hamburger-line1,
 .hamburger-line2,
 .hamburger-line3 {
   transition: all 0.3s ease;

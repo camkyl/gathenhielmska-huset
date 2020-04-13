@@ -93,18 +93,35 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+// Hamburger menu
 var burger = document.querySelector(".hamburger");
 var nav = document.querySelector(".nav");
 var search = document.querySelector(".search");
-var searchIcon = document.querySelector(".search-icon");
+var searchIcon = document.querySelector(".search-icon"); // Languages
+
+var flag = document.querySelector(".languages");
+var langMenu = document.querySelector(".flag-menu");
 
 var navSlide = function navSlide() {
   burger.addEventListener("click", function () {
-    burger.classList.toggle("toggle");
-    nav.classList.toggle("nav-active");
+    if (burger.classList.contains("toggle")) {
+      burger.classList.remove("toggle");
+      nav.classList.remove("nav-active");
+      langMenu.classList.remove("nav-active");
+    } else {
+      burger.classList.toggle("toggle");
+      nav.classList.toggle("nav-active");
+    }
   });
   searchIcon.addEventListener("click", function () {
     search.classList.toggle("search-active");
+  });
+  flag.addEventListener("click", function () {
+    langMenu.classList.toggle("nav-active");
+
+    if (langMenu.classList.contains("nav-active")) {
+      burger.classList.toggle("toggle");
+    }
   });
 };
 
