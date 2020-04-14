@@ -21,15 +21,11 @@
 
     &__category {
       text-transform: uppercase;
-      margin: 0 0 2vh 0;
+      margin: 2vh 0;
     }
 
     &__title {
       margin-bottom: 0;
-    }
-
-    &__date {
-      margin-top: 0;
     }
   }
 }
@@ -39,7 +35,7 @@
 }
 
 .events button {
-  margin: 0 4vw;
+  margin: 1vh 4vw 6vh 4vw;
   width: 92vw;
   padding: 10px;
   text-decoration: none;
