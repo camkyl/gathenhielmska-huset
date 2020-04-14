@@ -901,6 +901,15 @@ body {
   }
 }
 
+.landing-page__program__container {
+  display: flex;
+  overflow: scroll;
+}
+
+.landing-page__program__event {
+  width: 45vw;
+}
+
 .landing-page__about {
   background: url(../images/house-about.jpg?9d6528a2ba9cd66a765d0d2a1fd11f5a) no-repeat center center;
   background-size: cover;
@@ -1276,11 +1285,10 @@ body {
 }
 
 .events__img {
-  width: 100vw;
+  width: 100%;
 }
 
 .events__wrapper {
-  margin: 0 4vw;
   width: 92vw;
 }
 

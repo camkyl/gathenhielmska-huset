@@ -20,25 +20,17 @@
                 <div class="heading-wrapper__right"></div>
             </div>
 
-            <p>Program listed here</p>
+            <?php $args = ['post_type' => 'program', 'numberposts' => 4, 'order' => 'desc']; ?>
+            <?php $events = get_posts($args); ?>
 
-            <?php
-
-            $args = [
-                'post_type' => 'program',
-                'numberposts' => 2, // change number
-                'order' => 'desc'
-                // 'category' => ''
-            ];
-
-            $music = get_posts($args);
-
-            foreach ($music as $post) {
-                echo $post->post_title;
-                echo $post->post_content;
-            }
-
-            ?>
+            <div class="landing-page__program__container">
+                <?php foreach ($events as $post) : setup_postdata($post) ?>
+                    <article class="landing-page__program__event">
+                        <?php echo the_content(); ?>
+                        <h3><?php echo the_title(); ?></h3>
+                    </article>
+                <?php endforeach; ?>
+            </div>
 
             <div class="landing-page__button-wrapper">
                 <a href="<?php the_permalink(); ?>" class="a-button">

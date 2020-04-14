@@ -48,6 +48,15 @@
         width: 60vw;
       }
     }
+
+    &__container {
+      display: flex;
+      overflow: scroll;
+    }
+
+    &__event {
+      width: 45vw;
+    }
   }
 
   &__about {
