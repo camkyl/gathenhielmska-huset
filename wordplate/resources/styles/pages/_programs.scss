@@ -3,6 +3,10 @@
   @extend %flex-column;
   justify-content: space-between;
 
+  // @include respond-to(handhelds/wide-screens) {
+
+  // }
+
   width: 100vw;
 
   &__img {
@@ -12,6 +16,12 @@
   &__wrapper {
     margin: 0 4vw;
     width: 92vw;
+
+    &__text {
+      line-height: 1.5rem;
+      max-height: 10.5rem;
+      overflow: hidden;
+    }
 
     &__straight-line {
       height: 1px;
