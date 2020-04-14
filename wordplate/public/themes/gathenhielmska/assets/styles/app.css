@@ -692,12 +692,6 @@ form {
 
 */
 
-/*
-@import 'search';
-@import 'gallery';
-@import 'not-found';
-*/
-
 main {
   overflow-x: hidden;
   width: 100vw;
@@ -838,6 +832,24 @@ body {
   border: none;
 }
 
+.button {
+  all: unset;
+  background-color: #CC7B5C;
+  border-radius: 7px;
+  font-family: "Muli", sans-serif;
+  font-size: 0.875rem;
+  color: #EFDECE;
+  text-align: center;
+  padding: 10px;
+  width: 250px;
+}
+
+.a-button {
+  border-radius: 7px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin: 10px;
+}
+
 /* Import all pages */
 
 .landing-page {
@@ -970,17 +982,6 @@ body {
 
 .landing-page__button-wrapper {
   width: 100%;
-}
-
-.landing-page__button-wrapper button {
-  color: #EFDECE;
-  font-family: "Lato", sans-serif;
-  font-size: 0.75rem;
-  border: 1px solid #EFDECE;
-  border-radius: 7px;
-  background: none;
-  padding: 10px 16px;
-  margin: 20px;
 }
 
 .businesses {

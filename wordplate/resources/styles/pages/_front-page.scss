@@ -129,15 +129,4 @@
 .landing-page__button-wrapper {
   width: 100%;
   @extend %flex-center-center;
-
-  & button {
-    color: $timglas;
-    font-family: $lato;
-    font-size: 0.75rem;
-    border: 1px solid $timglas;
-    border-radius: 7px;
-    background: none;
-    padding: 10px 16px;
-    margin: 20px;
-  }
 }
