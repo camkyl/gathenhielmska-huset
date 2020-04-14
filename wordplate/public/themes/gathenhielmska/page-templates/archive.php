@@ -9,7 +9,7 @@
 <?php $videos = get_posts($vidArgs); ?>
 
 <section class="archive">
-
+ 
     <div class="heading-wrapper">
         <div class="heading-wrapper__left"></div>
         <h3><?php the_title(); ?></h3>

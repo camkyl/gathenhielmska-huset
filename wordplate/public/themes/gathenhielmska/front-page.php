@@ -66,7 +66,7 @@
         <div class="news">
             <div class="heading-wrapper">
                 <div class="heading-wrapper__left"></div>
-                <h3>Nyheter</h3>
+                <h3>Aktuellt</h3>
                 <div class="heading-wrapper__right"></div>
             </div>
 

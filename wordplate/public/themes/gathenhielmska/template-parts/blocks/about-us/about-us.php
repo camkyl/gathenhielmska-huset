@@ -6,7 +6,7 @@
  */
 
 $description = get_field("description");
-$image = get_field("timeline");
+$image = get_field("image");
 
 ?>
 

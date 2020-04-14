@@ -41,7 +41,7 @@
             <p>0760-983832</p>
         </div>
         <div class="in-charge-wrapper__team__right">
-            <img src="../../../uploads/office.jpeg" alt="" class="team__image">
+            <img src="<?php echo bloginfo('template_url'); ?>/assets/images/joel.png" alt="Joel" class="team__image">
         </div>
     </div>
     <div class="in-charge-wrapper__team">
@@ -52,7 +52,7 @@
             <p>0707-305134</p>
         </div>
         <div class="in-charge-wrapper__team__right">
-            <img src="../../../uploads/theoffice.png" alt="" class="team__image">
+            <img src="<?php echo bloginfo('template_url'); ?>/assets/images/david.png" alt="David" class="team__image">
         </div>
     </div>
     <div class="in-charge-wrapper__team">
@@ -63,7 +63,7 @@
             <p>0769-211107</p>
         </div>
         <div class="in-charge-wrapper__team__right">
-            <img src="../../../uploads/theoffice1.jpg" alt="" class="team__image">
+            <img src="<?php echo bloginfo('template_url'); ?>/assets/images/isabel.png" alt="Isabel" class="team__image">
         </div>
     </div>
 </div>

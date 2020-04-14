@@ -847,7 +847,7 @@ body {
 
 .landing-page__hero {
   width: 100%;
-  height: 100vh;
+  height: 92vh;
   padding: 10px;
   background-color: #979797;
   background: url(../images/hero-front.jpg?14a6b6c594d09e2482181eee1fccad67) no-repeat center center;
@@ -1505,6 +1505,10 @@ h2 {
   background: transparent;
   border: 1px solid white;
   border-radius: 7px;
+}
+
+#nf-form-title-2 {
+  display: none;
 }
 
 .in-charge-wrapper {
