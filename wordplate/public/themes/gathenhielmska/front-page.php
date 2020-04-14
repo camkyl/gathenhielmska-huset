@@ -33,9 +33,7 @@
             </div>
 
             <div class="landing-page__button-wrapper">
-                <a href="<?php the_permalink(); ?>" class="a-button">
-                    <button class="button">Se hela programmet</button>
-                </a>
+                <a href="<?php the_permalink(); ?>" class="button">Se hela programmet</a>
             </div>
         </div>
     </section>
@@ -52,9 +50,7 @@
             </p>
 
             <div class="landing-page__button-wrapper">
-                <a href="<?php echo get_bloginfo('url'); ?>/om-huset" class="a-button">
-                    <button class="button">Läs mer om huset</button>
-                </a>
+                <a href="<?php echo get_bloginfo('url'); ?>/om-huset" class="button">Läs mer om huset</a>
             </div>
         </div>
     </section>
@@ -79,9 +75,7 @@
             <?php endforeach; ?>
 
             <div class="landing-page__button-wrapper">
-                <a href="<?php echo get_bloginfo('url'); ?>/news" class="a-button">
-                    <button class="button">Läs fler nyheter</button>
-                </a>
+                <a href="<?php echo get_bloginfo('url'); ?>/news" class="button">Läs fler nyheter</a>
             </div>
         </div>
     </section>

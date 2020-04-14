@@ -4,6 +4,7 @@
   flex-direction: column;
   background-color: $oppethav;
 
+  /* Hero image */
   &__hero {
     @extend %flex-col-cen;
     width: 100%;
@@ -37,12 +38,13 @@
     margin: 10px;
   }
 
+  /* Program section */
   &__program {
     @extend %flex-col-cen;
 
     &__wrapper {
       width: 90vw;
-      padding-bottom: 40px;
+      padding-bottom: 14px;
 
       @include respond-to(wide-screens) {
         width: 60vw;
@@ -51,14 +53,50 @@
 
     &__container {
       display: flex;
-      overflow: scroll;
+      min-width: 90vw;
+      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
     }
 
+    &__container::-webkit-scrollbar {
+      display: none;
+  }
+
     &__event {
-      width: 45vw;
+      //width: 100vw;
+      scroll-snap-align: start;
+      position: relative;
+
+      & img {
+        width: 42vw;
+        height: 42vw;
+        margin-right: 1vw;
+        object-fit: cover;
+      }
+      & .events__wrapper__date {
+        font-family: $text;
+        font-size: 0.875rem;
+        font-weight: 300;
+        text-transform: none;
+        margin: 10px 0px 0px 0px;
+      }
+
+      & h3 {
+        font-family: $newsHeadings;
+        font-size: 1.4rem;
+        text-transform: none;
+        margin: 0;
+      }
+
+      & .events__wrapper__category,
+      & .events__wrapper__straight-line,
+      & .events__wrapper__text {
+        display: none;
+      }
     }
   }
 
+  /* About section */
   &__about {
     @extend %flex-col-cen;
     background: url('house-about.jpg') no-repeat center center;
@@ -72,7 +110,7 @@
 
     &__wrapper {
       width: 90vw;
-      padding-bottom: 30px;
+      padding-bottom: 14px;
 
       @include respond-to(wide-screens) {
         width: 60vw;
@@ -95,8 +133,9 @@
     }
 
     & p {
+      text-align: center;
+
       @include respond-to(wide-screens) {
-        text-align: center;
         padding: 0 100px;
       }
     }
@@ -108,14 +147,15 @@
     }
   }
 
+  /* New section */
   &__news {
     @extend %flex-col-cen;
+    padding-bottom: 14px;
 
     /*
     &__wrapper {
-      width: 90vw;
-      padding-bottom: 40px;
 
+      width: 90vw;
       @include respond-to(wide-screens) {
         width: 60vw;
       }

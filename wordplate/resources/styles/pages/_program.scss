@@ -14,7 +14,7 @@
   }
 
   &__wrapper {
-    width: 92vw;
+    width: 92%;
 
     &__text {
       line-height: 1.5rem;
@@ -43,6 +43,7 @@
   margin: 3vh auto;
 }
 
+/*
 .events button {
   margin: 1vh 4vw 6vh 4vw;
   width: 92vw;
@@ -52,9 +53,10 @@
   border-radius: 7px;
   background-color: $oppethav;
 }
+*/
 
-.events button a {
-  color: $timglas;
+.events a {
+  width: 92%;
 }
 
 // single-program.php

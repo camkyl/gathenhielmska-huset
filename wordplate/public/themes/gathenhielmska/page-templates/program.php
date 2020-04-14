@@ -22,9 +22,7 @@ $posts = get_posts($args);
 <?php foreach ($posts as $post) : setup_postdata($post) ?>
     <section class="events">
         <?php the_content(); ?>
-        <button>
-            <a href="<?php the_permalink(); ?>">Läs mer</a>
-        </button>
+        <a href="<?php the_permalink(); ?>" class="button">Läs mer</a>
     </section>
 <?php endforeach; ?>
 
