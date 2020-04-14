@@ -22,5 +22,5 @@ $description = get_field("description");
     <div class="events__wrapper__straight-line"></div>
     <h2 class="events__wrapper__title"><?php echo the_title(); ?></h2>
     <p class="events__wrapper__date"><?php echo $date; ?></p>
-    <p><?php echo $description; ?></p>
+    <p class="events__wrapper__text"><?php echo $description; ?></p>
 </div>
