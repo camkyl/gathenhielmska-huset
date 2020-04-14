@@ -3,10 +3,16 @@
 <section class="landing-page">
 
     <section class="landing-page__hero">
-        <h1>Gathenhielmska</h1>
+        <div class="landing-page__hero-title">
+            <h1>Gathenhielmska</h1>
+        </div>
+
+        <a href="#program">
+            <div class="landing-page__arrow"></div>
+        </a>
     </section>
 
-    <section class="landing-page__program">
+    <section class="landing-page__program" id="program">
         <div class="landing-page__program__wrapper">
             <div class="heading-wrapper">
                 <div class="heading-wrapper__left"></div>
