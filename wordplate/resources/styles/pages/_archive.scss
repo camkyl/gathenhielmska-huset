@@ -50,6 +50,13 @@
   /* Videos */
   &__videos {
     width: 92vw;
+    @extend %flex-col-cen;
+
+    @include respond-to(wide-screens) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 
   &__videos__single-video {
@@ -57,16 +64,30 @@
     height: auto;
     margin-bottom: 1rem;
 
+    @include respond-to(wide-screens) {
+      width: 45.5vw;
+    }
+
     & .iframe-wrapper {
-      width: 100%
+      width: 100%;
+      position: relative;
+      padding-bottom: 56.25%; /* ratio 16:9 */
+      height: 0;
+
+      @include respond-to(wide-screens) {
+        width: 45.5vw;
+      }
     }
 
     & .iframe-wrapper iframe {
-      width: 100%
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 }
-
 
 .archive__alternatives {
   display: flex;
@@ -97,7 +118,9 @@
 
 .--active {
   background-color: $timglas;
+
+  & a {
+    color: $murgrona;
+  }
 }
-.--active a {
-  color: $murgrona;
-}
+
