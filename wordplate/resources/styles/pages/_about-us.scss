@@ -1,16 +1,33 @@
 .about-us {
-  width: 92vw;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+  width: 100vw;
+  @extend %flex-col-cen;
+  background-color: $murgrona;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 92%;
+  }
 
   &__para {
     margin-top: 0;
+    font-weight: 300;
+
+    @include respond-to(wide-screens) {
+      width: 60vw;
+      font-size: 1.25rem;
+    }
   }
 
   &__img {
     width: 100%;
     height: auto;
-    margin: 5vh 0;
+    margin: 20px 0;
+    object-fit: cover;
+
+    @include respond-to(wide-screens) {
+      width: 96vw;
+    }
   }
 }

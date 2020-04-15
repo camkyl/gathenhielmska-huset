@@ -2,8 +2,6 @@
 
 <?php get_header(); ?>
 
-
-
 <!--The content in the admin page-->
 <?php if (have_posts()) : ?>
 

@@ -225,25 +225,6 @@
         font-size: 1.5rem;
         }
     }
-    /*
-    &__wrapper {
-      width: 90vw;
-
-      @include respond-to(wide-screens) {
-        width: 60vw;
-      }
-    }
-
-    &__wrapper article {
-      width: 100%;
-      @extend %flex-col-cen;
-    }
-
-    &__wrapper .news__article-img,
-    &__wrapper .news__article-content {
-      width: 90vw;
-    }
-    */
   }
 }
 
