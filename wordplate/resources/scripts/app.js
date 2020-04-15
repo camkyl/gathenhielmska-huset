@@ -101,7 +101,7 @@ fetchImages.addEventListener("click", e => {
 // Fetch images on page load
 const path = window.location.pathname;
 
-if (path === "/arkiv/") {
+if (path === "/archive/") {
   window.addEventListener("load", e => {
     e.preventDefault();
 

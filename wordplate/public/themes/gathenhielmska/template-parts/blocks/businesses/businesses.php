@@ -12,7 +12,6 @@ $website = get_field('website');
 ?>
 
 <article class="businesses__article">
-    <p class="--title"><?php echo $name; ?></p>
+    <h4 class="--title"><a href="<?php echo $website; ?>" class="--website"><?php echo $name; ?></a></h4>
     <p class="--role"><?php echo $role; ?></p>
-    <a class="--website"><?php echo $website; ?></a>
 </article>

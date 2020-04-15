@@ -1059,6 +1059,11 @@ a.button {
   background-color: #F6E5CA;
 }
 
+.businesses .heading-wrapper__left,
+.businesses .heading-wrapper__right {
+  background-color: #334859;
+}
+
 .businesses__content-wrapper {
   width: 90%;
   padding: 10px;
@@ -1069,6 +1074,8 @@ a.button {
     width: 60%;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 20px;
   }
 }
 
@@ -1089,7 +1096,7 @@ a.button {
 }
 
 .businesses h3 {
-  color: #F9F3EB;
+  color: #334859;
   text-transform: uppercase;
   font-weight: lighter;
   margin: 5px;
@@ -1101,8 +1108,13 @@ a.button {
   }
 }
 
+.businesses__article h4 {
+  line-height: 1;
+  margin: 0;
+}
+
 .businesses__article p {
-  color: #F9F3EB;
+  color: #334859;
   margin: 0;
 }
 
@@ -1115,7 +1127,15 @@ a.button {
 }
 
 .businesses__article a {
-  color: #F9F3EB;
+  color: #334859;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+@media only screen and (min-width: 830px) {
+  .businesses__article a {
+    font-size: 1.5rem;
+  }
 }
 
 .news {
@@ -1717,6 +1737,7 @@ h2 {
 @media only screen and (min-width: 830px) {
   .heading-wrapper h3 {
     margin: 20px;
+    font-size: 1.5rem;
   }
 }
 

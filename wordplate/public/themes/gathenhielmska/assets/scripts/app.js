@@ -180,7 +180,7 @@ fetchImages.addEventListener("click", function (e) {
 
 var path = window.location.pathname;
 
-if (path === "/arkiv/") {
+if (path === "/archive/") {
   window.addEventListener("load", function (e) {
     e.preventDefault();
     fetchImages.classList.add("--active");

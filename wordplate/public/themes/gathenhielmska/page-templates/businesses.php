@@ -15,7 +15,7 @@
 
             <!--the_content() is what's in template-parts/blocks/businesses/businesses.php-->
             <div class="businesses__content-wrapper">
-                <?php the_content(); ?>
+                <?php the_content(); ?> 
             </div>
 
         <?php endwhile; ?>
