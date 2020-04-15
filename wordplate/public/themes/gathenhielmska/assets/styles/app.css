@@ -580,7 +580,7 @@ textarea,
 h1 {
   font-family: "Source Serif Pro", serif;
   font-size: 2.6rem;
-  color: #EFDECE;
+  color: #F9F3EB;
   margin: 0;
 }
 
@@ -590,7 +590,7 @@ h4,
 h5,
 h6 {
   font-family: "Muli", sans-serif;
-  color: #EFDECE;
+  color: #F9F3EB;
 }
 
 h2 {
@@ -610,7 +610,7 @@ li {
 p {
   font-size: 1rem;
   font-family: "Muli", sans-serif;
-  color: #EFDECE;
+  color: #F9F3EB;
 }
 
 a,
@@ -698,7 +698,7 @@ main {
 
 body {
   overflow-x: hidden;
-  background-color: #2f3e46;
+  background-color: #EAD6B8;
 }
 
 .header {
@@ -708,7 +708,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #EFDECE;
+  background-color: #F9F3EB;
   height: 8vh;
   overflow-x: hidden;
 }
@@ -761,7 +761,7 @@ body {
   width: 100vw;
   top: 0;
   left: 0;
-  background-color: #EFDECE;
+  background-color: #F9F3EB;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -818,7 +818,7 @@ body {
   width: 100vw;
   height: 5vh;
   padding-left: 5vw;
-  background-color: #EFDECE;
+  background-color: #F9F3EB;
   border: none;
 }
 
@@ -837,7 +837,7 @@ a.button {
   border-radius: 7px;
   font-family: "Muli", sans-serif;
   font-size: 0.875rem;
-  color: #EFDECE;
+  color: #F9F3EB;
   text-align: center;
   padding: 10px 0;
   margin: 16px 0;
@@ -858,7 +858,7 @@ a.button {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  background-color: #2f3e46;
+  background-color: #EAD6B8;
   /* Hero image */
   /* Program section */
   /* About section */
@@ -1040,7 +1040,7 @@ a.button {
 
 .businesses {
   width: 100vw;
-  background-color: #2f3e46;
+  background-color: #EAD6B8;
 }
 
 .businesses__content-wrapper {
@@ -1073,7 +1073,7 @@ a.button {
 }
 
 .businesses h3 {
-  color: #EFDECE;
+  color: #F9F3EB;
   text-transform: uppercase;
   font-weight: lighter;
   margin: 5px;
@@ -1086,7 +1086,7 @@ a.button {
 }
 
 .businesses__article p {
-  color: #EFDECE;
+  color: #F9F3EB;
   margin: 0;
 }
 
@@ -1099,12 +1099,12 @@ a.button {
 }
 
 .businesses__article a {
-  color: #EFDECE;
+  color: #F9F3EB;
 }
 
 .news {
   width: 100vw;
-  background-color: #2f3e46;
+  background-color: #EAD6B8;
 }
 
 .news__article {
@@ -1157,7 +1157,7 @@ a.button {
 .news__article-content h4,
 .news__article-content p,
 .news__article-content a {
-  color: #EFDECE;
+  color: #F9F3EB;
   margin: 0;
 }
 
@@ -1206,7 +1206,7 @@ a.button {
 /* single-news.php */
 
 .single-news {
-  background-color: #2f3e46;
+  background-color: #EAD6B8;
   width: 100vw;
 }
 
@@ -1228,7 +1228,7 @@ a.button {
 }
 
 .single-news h3 {
-  color: #EFDECE;
+  color: #F9F3EB;
   font-family: "Source Serif Pro", serif;
   font-size: 1.5rem;
   text-transform: none;
@@ -1245,7 +1245,7 @@ a.button {
 }
 
 .single-news h4 {
-  border-bottom: 1px solid #EFDECE;
+  border-bottom: 1px solid #F9F3EB;
 }
 
 .single-news .news__article-img {
@@ -1346,7 +1346,7 @@ a.button {
 .events__wrapper__straight-line {
   height: 1px;
   width: 30vw;
-  background-color: #EFDECE;
+  background-color: #F9F3EB;
 }
 
 .events__wrapper__category {
@@ -1390,7 +1390,7 @@ a.button {
 
 .archive {
   width: 100vw;
-  background-color: #2f3e46;
+  background-color: #334859;
 }
 
 .archive__images {
@@ -1455,13 +1455,13 @@ a.button {
 .archive__alternatives-images,
 .archive__alternatives-videos {
   width: 130px;
-  border: 1px solid #EFDECE;
+  border: 1px solid #F9F3EB;
 }
 
 .archive__alternatives-images a,
 .archive__alternatives-videos a {
   font-size: 0.75rem;
-  color: #EFDECE;
+  color: #F9F3EB;
   text-decoration: none;
   margin: 0px;
   padding: 5px 0px;
@@ -1470,7 +1470,7 @@ a.button {
 .footer {
   width: 100vw;
   margin: 0 auto;
-  background-color: #23405E;
+  background-color: #475B6C;
 }
 
 @media only screen and (min-width: 830px) {
@@ -1509,15 +1509,15 @@ a.button {
   height: 1px;
   margin: 0 auto;
   width: 92vw;
-  background-color: #EFDECE;
+  background-color: #F9F3EB;
 }
 
 .footer__links_wrapper__left p a {
-  color: #EFDECE;
+  color: #F9F3EB;
 }
 
 .footer__links_wrapper__right p a {
-  color: #EFDECE;
+  color: #F9F3EB;
 }
 
 .sponsors {
@@ -1635,7 +1635,7 @@ h2 {
 .heading-wrapper__left,
 .heading-wrapper__right {
   flex: 1;
-  background-color: #EFDECE;
+  background-color: #F9F3EB;
   height: 1px;
 }
 
