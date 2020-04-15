@@ -13,16 +13,15 @@ const navSlide = () => {
       burger.classList.remove("toggle");
       nav.classList.remove("nav-active");
       langMenu.classList.remove("nav-active");
-    }
-    else {
+    } else {
       burger.classList.toggle("toggle");
       nav.classList.toggle("nav-active");
     }
-  })
+  });
 
   searchIcon.addEventListener("click", () => {
     search.classList.toggle("search-active");
-  })
+  });
 
   flag.addEventListener("click", () => {
     langMenu.classList.toggle("nav-active");
@@ -30,10 +29,72 @@ const navSlide = () => {
     if (langMenu.classList.contains("nav-active")) {
       burger.classList.toggle("toggle");
     }
-  })
-
-}
+  });
+};
 
 navSlide();
 
-// console.log(burger);
+// Fetching videos
+const videosUrl = "http://localhost:1337/wp-json/wp/v2/videos";
+const url = `${window.location.origin}/wp-json/wp/v2/videos`;
+
+// Videos-tab
+const fetchVideos = document.querySelector(".fetch-videos");
+
+// Div where videos will be appended
+const videosArchive = document.querySelector(".archive__videos");
+
+fetchVideos.addEventListener("click", e => {
+  // Prevents redirection to page
+  e.preventDefault();
+
+  // Removed the images if the user clicks on videos-tab
+  imagesArchive.innerHTML = "";
+
+  // Focus
+  fetchVideos.classList.add('--active');
+  fetchImages.classList.remove('--active');
+
+  fetch(videosUrl)
+    .then(response => response.json())
+    .then(videos => {
+      videos.forEach(video => {
+        const videoContent = document.createElement("article");
+        videoContent.classList.add("archive__videos__single-video");
+        videoContent.innerHTML = video.content.rendered;
+        videosArchive.appendChild(videoContent);
+      });
+    });
+});
+
+// Fetching images
+const imagesUrl = "http://localhost:1337/wp-json/wp/v2/images";
+const url2 = `${window.location.origin}/wp-json/wp/v2/images`;
+
+// Images-tab
+const fetchImages = document.querySelector(".fetch-images");
+const imagesArchive = document.querySelector(".archive__images");
+
+fetchImages.addEventListener("click", e => {
+
+  // Prevents redirection to page
+  e.preventDefault();
+
+  // Removes the videos if the user clicks on images-tab
+  videosArchive.innerHTML = "";
+
+  // Focus
+  fetchImages.classList.add('--active');
+  fetchVideos.classList.remove('--active');
+
+  fetch(imagesUrl)
+    .then(response => response.json())
+    .then(images => {
+      images.forEach(image => {
+        const imageContent = document.createElement("article");
+        imageContent.classList.add("archive__images--single-image");
+        imageContent.innerHTML = image.content.rendered;
+        imagesArchive.appendChild(imageContent);
+      });
+    });
+});
