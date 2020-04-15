@@ -722,11 +722,23 @@ body {
 }
 
 .header__right__flag {
-  margin-right: 7vw;
+  margin-right: 2vw;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 830px) {
+  .header__right__flag {
+    margin-right: 1vw;
+  }
 }
 
 .header__right__arrow {
-  margin: 0 2vw;
+  margin-right: 3vw;
+}
+
+.header__right__search {
+  margin-right: 3vw;
+  cursor: pointer;
 }
 
 .header__right__hamburger {
@@ -736,6 +748,13 @@ body {
   height: 8vh;
   margin-right: 5vw;
   z-index: 100;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 830px) {
+  .header__right__hamburger {
+    margin-right: 2vw;
+  }
 }
 
 .header__right__hamburger__line2,
@@ -747,11 +766,24 @@ body {
   border-radius: 1px;
 }
 
+@media only screen and (min-width: 830px) {
+  .header__right__hamburger__line2,
+  .header__right__hamburger__line3 {
+    width: 3vw;
+  }
+}
+
 .header__right__hamburger__line1 {
   height: 3px;
   width: 7vw;
   background-color: black;
   border-radius: 1px;
+}
+
+@media only screen and (min-width: 830px) {
+  .header__right__hamburger__line1 {
+    width: 3vw;
+  }
 }
 
 .nav,
@@ -771,11 +803,23 @@ body {
   z-index: 2;
   background-image: url(../images/background-logo.png?4d9ddd1bee1d10c6a5a4668b9921d39f);
   background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media only screen and (min-width: 830px) {
+  .nav,
+  .flag-menu {
+    background-position: 100% 100%;
+    background-size: 200px 200px;
+  }
 }
 
 .nav-language li:nth-child(1) {
-  border: 1px solid black;
-  border-radius: 7px;
+  font-weight: bold;
+}
+
+.nav-ul {
+  padding: 0;
 }
 
 .nav ul li,
@@ -783,6 +827,17 @@ body {
   margin: 2vh 0;
   text-transform: uppercase;
   padding: 6px 25px;
+  text-align: center;
+  list-style-type: none;
+}
+
+@media only screen and (min-width: 830px) {
+  .nav ul li,
+  .nav-ul li {
+    text-align: left;
+    padding-left: 1vw;
+    margin: 0;
+  }
 }
 
 .nav-language .hamburger-line1,
@@ -809,6 +864,16 @@ body {
   display: flex;
 }
 
+@media only screen and (min-width: 830px) {
+  .nav-active {
+    height: 60vh;
+    width: 20vw;
+    display: block;
+    margin-top: 8vh;
+    left: 80vw;
+  }
+}
+
 .search {
   width: 100vw;
   display: none;
@@ -822,8 +887,42 @@ body {
   border: none;
 }
 
+.search-desktop {
+  display: none;
+}
+
+@media only screen and (min-width: 830px) {
+  .search-desktop {
+    width: 20vw;
+    align-items: center;
+  }
+
+  .search-desktop__form {
+    height: 5vh;
+  }
+
+  .search-desktop__form__input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    background-color: #F9F3EB;
+  }
+}
+
+.search-desktop-active {
+  display: flex;
+}
+
 .search-active {
   display: block;
+}
+
+@media only screen and (min-width: 830px) {
+  .search-active {
+    display: none;
+  }
 }
 
 .search__input:focus {

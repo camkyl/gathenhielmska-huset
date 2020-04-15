@@ -97,7 +97,8 @@
 var burger = document.querySelector(".hamburger");
 var nav = document.querySelector(".nav");
 var search = document.querySelector(".search");
-var searchIcon = document.querySelector(".search-icon"); // Languages
+var searchIcon = document.querySelector(".search-icon");
+var searchDesktop = document.querySelector(".search-desktop"); // Languages
 
 var flag = document.querySelector(".languages");
 var langMenu = document.querySelector(".flag-menu");
@@ -115,9 +116,11 @@ var navSlide = function navSlide() {
   });
   searchIcon.addEventListener("click", function () {
     search.classList.toggle("search-active");
+    searchDesktop.classList.toggle("search-desktop-active");
   });
   flag.addEventListener("click", function () {
     langMenu.classList.toggle("nav-active");
+    burger.classList.remove("toggle");
 
     if (langMenu.classList.contains("nav-active")) {
       burger.classList.toggle("toggle");
