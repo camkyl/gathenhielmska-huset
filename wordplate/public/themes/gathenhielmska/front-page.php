@@ -13,9 +13,10 @@
             <source src="<?php echo bloginfo('template_url'); ?>/herovideo/GH_Ingela_Herovideo_Desktop.mp4" type="video/mp4" media="(min-width: 830px)" />
         </video>
 
-        <a href="#program">
+
+        <!-- <a href="#program">
             <div class="landing-page__arrow"></div>
-        </a>
+        </a> -->
     </section>
 
     <section class="landing-page__program" id="program">
