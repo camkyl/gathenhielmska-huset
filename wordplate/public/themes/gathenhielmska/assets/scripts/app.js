@@ -126,9 +126,9 @@ var navSlide = function navSlide() {
 };
 
 navSlide(); // Fetching videos
+// const videosUrl = "http://localhost:1337/wp-json/wp/v2/videos";
 
-var videosUrl = "http://localhost:1337/wp-json/wp/v2/videos";
-var url = "".concat(window.location.origin, "/wp-json/wp/v2/videos"); // Videos-tab
+var videosUrl = "".concat(window.location.origin, "/wp-json/wp/v2/videos"); // Videos-tab
 
 var fetchVideos = document.querySelector(".fetch-videos"); // Div where videos will be appended
 
@@ -139,8 +139,8 @@ fetchVideos.addEventListener("click", function (e) {
 
   imagesArchive.innerHTML = ""; // Focus
 
-  fetchVideos.classList.add('--active');
-  fetchImages.classList.remove('--active');
+  fetchVideos.classList.add("--active");
+  fetchImages.classList.remove("--active");
   fetch(videosUrl).then(function (response) {
     return response.json();
   }).then(function (videos) {
@@ -152,9 +152,9 @@ fetchVideos.addEventListener("click", function (e) {
     });
   });
 }); // Fetching images
+//const imagesUrl = "http://localhost:1337/wp-json/wp/v2/images";
 
-var imagesUrl = "http://localhost:1337/wp-json/wp/v2/images";
-var url2 = "".concat(window.location.origin, "/wp-json/wp/v2/images"); // Images-tab
+var imagesUrl = "".concat(window.location.origin, "/wp-json/wp/v2/images"); // Images-tab
 
 var fetchImages = document.querySelector(".fetch-images");
 var imagesArchive = document.querySelector(".archive__images");
@@ -164,8 +164,8 @@ fetchImages.addEventListener("click", function (e) {
 
   videosArchive.innerHTML = ""; // Focus
 
-  fetchImages.classList.add('--active');
-  fetchVideos.classList.remove('--active');
+  fetchImages.classList.add("--active");
+  fetchVideos.classList.remove("--active");
   fetch(imagesUrl).then(function (response) {
     return response.json();
   }).then(function (images) {
@@ -176,7 +176,27 @@ fetchImages.addEventListener("click", function (e) {
       imagesArchive.appendChild(imageContent);
     });
   });
-});
+}); // Fetch images on page load
+
+var path = window.location.pathname;
+
+if (path === "/arkiv/") {
+  window.addEventListener("load", function (e) {
+    e.preventDefault();
+    fetchImages.classList.add("--active");
+    fetchVideos.classList.remove("--active");
+    fetch(imagesUrl).then(function (response) {
+      return response.json();
+    }).then(function (images) {
+      images.forEach(function (image) {
+        var imageContent = document.createElement("article");
+        imageContent.classList.add("archive__images--single-image");
+        imageContent.innerHTML = image.content.rendered;
+        imagesArchive.appendChild(imageContent);
+      });
+    });
+  });
+}
 
 /***/ }),
 

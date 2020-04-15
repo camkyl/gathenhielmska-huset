@@ -35,8 +35,8 @@ const navSlide = () => {
 navSlide();
 
 // Fetching videos
-const videosUrl = "http://localhost:1337/wp-json/wp/v2/videos";
-const url = `${window.location.origin}/wp-json/wp/v2/videos`;
+// const videosUrl = "http://localhost:1337/wp-json/wp/v2/videos";
+const videosUrl = `${window.location.origin}/wp-json/wp/v2/videos`;
 
 // Videos-tab
 const fetchVideos = document.querySelector(".fetch-videos");
@@ -52,8 +52,8 @@ fetchVideos.addEventListener("click", e => {
   imagesArchive.innerHTML = "";
 
   // Focus
-  fetchVideos.classList.add('--active');
-  fetchImages.classList.remove('--active');
+  fetchVideos.classList.add("--active");
+  fetchImages.classList.remove("--active");
 
   fetch(videosUrl)
     .then(response => response.json())
@@ -68,15 +68,14 @@ fetchVideos.addEventListener("click", e => {
 });
 
 // Fetching images
-const imagesUrl = "http://localhost:1337/wp-json/wp/v2/images";
-const url2 = `${window.location.origin}/wp-json/wp/v2/images`;
+//const imagesUrl = "http://localhost:1337/wp-json/wp/v2/images";
+const imagesUrl = `${window.location.origin}/wp-json/wp/v2/images`;
 
 // Images-tab
 const fetchImages = document.querySelector(".fetch-images");
 const imagesArchive = document.querySelector(".archive__images");
 
 fetchImages.addEventListener("click", e => {
-
   // Prevents redirection to page
   e.preventDefault();
 
@@ -84,8 +83,8 @@ fetchImages.addEventListener("click", e => {
   videosArchive.innerHTML = "";
 
   // Focus
-  fetchImages.classList.add('--active');
-  fetchVideos.classList.remove('--active');
+  fetchImages.classList.add("--active");
+  fetchVideos.classList.remove("--active");
 
   fetch(imagesUrl)
     .then(response => response.json())
@@ -98,3 +97,26 @@ fetchImages.addEventListener("click", e => {
       });
     });
 });
+
+// Fetch images on page load
+const path = window.location.pathname;
+
+if (path === "/arkiv/") {
+  window.addEventListener("load", e => {
+    e.preventDefault();
+
+    fetchImages.classList.add("--active");
+    fetchVideos.classList.remove("--active");
+
+    fetch(imagesUrl)
+      .then(response => response.json())
+      .then(images => {
+        images.forEach(image => {
+          const imageContent = document.createElement("article");
+          imageContent.classList.add("archive__images--single-image");
+          imageContent.innerHTML = image.content.rendered;
+          imagesArchive.appendChild(imageContent);
+        });
+      });
+  });
+}
