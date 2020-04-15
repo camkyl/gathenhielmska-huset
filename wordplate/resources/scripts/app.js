@@ -3,6 +3,7 @@ const burger = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav");
 const search = document.querySelector(".search");
 const searchIcon = document.querySelector(".search-icon");
+const searchDesktop = document.querySelector(".search-desktop");
 // Languages
 const flag = document.querySelector(".languages");
 const langMenu = document.querySelector(".flag-menu");
@@ -21,10 +22,12 @@ const navSlide = () => {
 
   searchIcon.addEventListener("click", () => {
     search.classList.toggle("search-active");
+    searchDesktop.classList.toggle("search-desktop-active");
   });
 
   flag.addEventListener("click", () => {
     langMenu.classList.toggle("nav-active");
+    burger.classList.remove("toggle");
 
     if (langMenu.classList.contains("nav-active")) {
       burger.classList.toggle("toggle");
