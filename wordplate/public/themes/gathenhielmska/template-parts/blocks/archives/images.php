@@ -8,7 +8,7 @@
 $image = get_field('image');
 $imageTitle = get_field('image_title');
 $imageText = get_field('image_text');
-$imageDate = get_field('date');
+$imageDate = get_field('date'); 
 
 ?>
 

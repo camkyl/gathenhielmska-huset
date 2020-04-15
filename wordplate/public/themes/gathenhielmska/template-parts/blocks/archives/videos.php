@@ -5,13 +5,11 @@
  *
  */
 
-$image = get_field('image');
-$imageTitle = get_field('image_title');
-$imageText = get_field('image_text');
-$imageDate = get_field('date');
+$videoUrl = get_field('video_url');
+$videoDescription = get_field('video_description');
 
 ?>
 
-<article class="archive__images-wrapper">
-    <img src="<?php echo $image['url']; ?>" alt="<?php echo $imageTitle; ?>">
-</article>
+<div class="iframe-wrapper">
+    <iframe src="<?php echo $videoUrl; ?>" loading="lazy"></iframe>
+</div>

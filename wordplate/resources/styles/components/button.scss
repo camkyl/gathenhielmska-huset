@@ -1,4 +1,20 @@
-.button {
+a.button {
   all: unset;
-  // Some common styling for all buttons
+  background-color: $eldsjal;
+  border-radius: 7px;
+  font-family: $text;
+  font-size: 0.875rem;
+  color: $timglas;
+  text-align: center;
+  padding: 10px 0;
+  margin: 16px 0;
+  width: 250px;
 }
+
+/*
+.a-button {
+  border-radius: 7px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin: 10px;
+}
+*/

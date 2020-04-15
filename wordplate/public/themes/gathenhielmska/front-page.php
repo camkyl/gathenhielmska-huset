@@ -3,10 +3,22 @@
 <section class="landing-page">
 
     <section class="landing-page__hero">
-        <h1>Gathenhielmska</h1>
+        <!--
+        <div class="landing-page__hero-title">
+            <h1>Gathenhielmska</h1>
+        </div>
+        -->
+        <video autoplay muted class="landing-page__hero-video">
+            <source src="<?php echo bloginfo('template_url'); ?>/herovideo/GH_Ingela_Herovideo_Mobile.mp4" type="video/mp4">
+            <source src="<?php echo bloginfo('template_url'); ?>/herovideo/GH_Ingela_Herovideo_Desktop.mp4" type="video/mp4" media="(min-width: 830px)" />
+        </video>
+
+        <a href="#program">
+            <div class="landing-page__arrow"></div>
+        </a>
     </section>
 
-    <section class="landing-page__program">
+    <section class="landing-page__program" id="program">
         <div class="landing-page__program__wrapper">
             <div class="heading-wrapper">
                 <div class="heading-wrapper__left"></div>
@@ -14,30 +26,20 @@
                 <div class="heading-wrapper__right"></div>
             </div>
 
-            <p>Program listed here</p>
+            <?php $args = ['post_type' => 'program', 'numberposts' => 4, 'order' => 'desc']; ?>
+            <?php $events = get_posts($args); ?>
 
-            <?php
-
-            $args = [
-                'post_type' => 'program',
-                'numberposts' => 2, // change number
-                'order' => 'desc'
-                // 'category' => ''
-            ];
-
-            $music = get_posts($args);
-
-            foreach ($music as $post) {
-                echo $post->post_title;
-                echo $post->post_content;
-            }
-
-            ?>
+            <div class="landing-page__program__container">
+                <?php foreach ($events as $post) : setup_postdata($post) ?>
+                    <article class="landing-page__program__event">
+                        <?php echo the_content(); ?>
+                        <h3><?php echo the_title(); ?></h3>
+                    </article>
+                <?php endforeach; ?>
+            </div>
 
             <div class="landing-page__button-wrapper">
-                <a href="<?php the_permalink(); ?>">
-                    <button>Se hela programmet</button>
-                </a>
+                <a href="<?php the_permalink(); ?>" class="button">Se hela programmet</a>
             </div>
         </div>
     </section>
@@ -54,9 +56,7 @@
             </p>
 
             <div class="landing-page__button-wrapper">
-                <a href="<?php echo get_bloginfo('url'); ?>/om-huset">
-                    <button>Läs mer om huset</button>
-                </a>
+                <a href="<?php echo get_bloginfo('url'); ?>/om-huset" class="button">Läs mer om huset</a>
             </div>
         </div>
     </section>
@@ -66,7 +66,7 @@
         <div class="news">
             <div class="heading-wrapper">
                 <div class="heading-wrapper__left"></div>
-                <h3>Nyheter</h3>
+                <h3>Aktuellt</h3>
                 <div class="heading-wrapper__right"></div>
             </div>
 
@@ -81,9 +81,7 @@
             <?php endforeach; ?>
 
             <div class="landing-page__button-wrapper">
-                <a href="<?php echo get_bloginfo('url'); ?>/news">
-                    <button>Läs fler nyheter</button>
-                </a>
+                <a href="<?php echo get_bloginfo('url'); ?>/news" class="button">Läs fler nyheter</a>
             </div>
         </div>
     </section>
