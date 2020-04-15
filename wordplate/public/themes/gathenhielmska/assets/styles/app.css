@@ -1424,6 +1424,7 @@ a.button {
 
 .events {
   justify-content: space-between;
+  background-color: #334859;
   width: 100vw;
 }
 
@@ -1435,12 +1436,6 @@ a.button {
   width: 92%;
 }
 
-.events__wrapper__text {
-  line-height: 1.5rem;
-  max-height: 10.5rem;
-  overflow: hidden;
-}
-
 .events__wrapper__straight-line {
   height: 1px;
   width: 30vw;
@@ -1448,29 +1443,52 @@ a.button {
 }
 
 .events__wrapper__category {
+  font-family: "Muli", sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
   text-transform: uppercase;
-  margin: 2vh 0;
+  margin: 10px 0;
 }
 
-.events__wrapper__title {
-  margin-bottom: 0;
+@media only screen and (min-width: 830px) {
+  .events__wrapper__category {
+    font-size: 0.875rem;
+  }
+}
+
+.events__wrapper h2 {
+  margin: 10px 0;
+  font-family: "Source Serif Pro", serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 830px) {
+  .events__wrapper h2 {
+    font-size: 2.2rem;
+  }
+}
+
+.events__wrapper__date {
+  font-weight: 300;
+}
+
+.events__wrapper__text {
+  line-height: 1.5rem;
+  max-height: 10.5rem;
+  overflow: hidden;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 830px) {
+  .events__wrapper__text {
+    font-size: 1.125rem;
+  }
 }
 
 .page-title div {
   margin: 3vh auto;
 }
-
-/*
-.events button {
-  margin: 1vh 4vw 6vh 4vw;
-  width: 92vw;
-  padding: 10px;
-  text-decoration: none;
-  border: 1px solid $timglas;
-  border-radius: 7px;
-  background-color: $oppethav;
-}
-*/
 
 .events a {
   width: 92%;

@@ -9,7 +9,6 @@ $image = get_field('image');
 $categories = get_field('category');
 $date = get_field("date");
 $description = get_field("description");
-// Categories seems to have a bug somewhere, maybe has to do with the error messages in the dashboard
 
 
 ?>
