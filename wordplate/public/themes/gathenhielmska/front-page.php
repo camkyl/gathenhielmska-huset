@@ -3,9 +3,15 @@
 <section class="landing-page">
 
     <section class="landing-page__hero">
+        <!--
         <div class="landing-page__hero-title">
             <h1>Gathenhielmska</h1>
         </div>
+        -->
+        <video autoplay muted class="landing-page__hero-video">
+            <source src="<?php echo bloginfo('template_url'); ?>/herovideo/GH_Ingela_Herovideo_Mobile.mp4" type="video/mp4">
+            <source src="<?php echo bloginfo('template_url'); ?>/herovideo/GH_Ingela_Herovideo_Desktop.mp4" type="video/mp4" media="(min-width: 830px)" />
+        </video>
 
         <a href="#program">
             <div class="landing-page__arrow"></div>

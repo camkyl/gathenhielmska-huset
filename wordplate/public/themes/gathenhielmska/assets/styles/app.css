@@ -646,7 +646,6 @@ a:visited {
 .landing-page__news,
 .landing-page__about,
 .landing-page__program,
-.landing-page__hero-title,
 .landing-page__hero {
   display: flex;
   flex-direction: column;
@@ -861,6 +860,19 @@ a.button {
   flex-direction: column;
   background-color: #F6E5CA;
   /* Hero image */
+  /*
+  &__hero-title {
+    height: calc(92vh - 40px);
+    @extend %flex-col-cen;
+    justify-content: center;
+  }
+
+  & h1 {
+    @include respond-to(wide-screens) {
+      font-size: 4.6rem;
+    }
+  }
+  */
   /* Program section */
   /* About section */
   /* New section */
@@ -869,22 +881,25 @@ a.button {
 .landing-page__hero {
   width: 100%;
   height: 92vh;
+  /*
   padding: 10px;
-  background-color: #979797;
-  background: url(../images/hero-front.jpg?14a6b6c594d09e2482181eee1fccad67) no-repeat center center;
+  background-color: rgb(151, 151, 151);
+  background: url('hero-front.jpg') no-repeat center center;
   background-size: cover;
   box-shadow: inset 0 0 0 3000px rgba(50, 62, 69, 0.3);
+  */
 }
 
-.landing-page__hero-title {
-  height: calc(92vh - 40px);
-  justify-content: center;
+.landing-page__hero-video {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
 }
 
-@media only screen and (min-width: 830px) {
-  .landing-page h1 {
-    font-size: 4.6rem;
-  }
+.landing-page__hero-video source {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
 }
 
 .landing-page__arrow {
