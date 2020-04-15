@@ -4,9 +4,9 @@
   width: 100vw;
   background-color: $murgrona;
 
+  /* Images */
   &__images {
     width: 90vw;
-    min-height: 80vh;
     -webkit-column-count: 2;
     -webkit-column-gap:   4px;
     -moz-column-count:    2;
@@ -46,7 +46,27 @@
     object-fit: contain;
     object-position: center 10%;
   }
+
+  /* Videos */
+  &__videos {
+    width: 92vw;
+  }
+
+  &__videos__single-video {
+    width: 92vw;
+    height: auto;
+    margin-bottom: 1rem;
+
+    & .iframe-wrapper {
+      width: 100%
+    }
+
+    & .iframe-wrapper iframe {
+      width: 100%
+    }
+  }
 }
+
 
 .archive__alternatives {
   display: flex;
@@ -73,4 +93,11 @@
     margin: 0px;
     padding: 5px 0px;
   }
+}
+
+.--active {
+  background-color: $timglas;
+}
+.--active a {
+  color: $murgrona;
 }

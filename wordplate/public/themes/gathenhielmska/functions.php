@@ -48,7 +48,7 @@ function my_acf_blocks_init()
             'keywords' => ['news', 'article'] // to make it more searchable, max 3
         ));
 
-        // Register business block.
+        // Register businesses block.
         acf_register_block_type(array(
             'name'              => 'businesses', // the slug, what is used in code
             'title'             => __('Businesses-template'), // human readable thing
@@ -64,7 +64,7 @@ function my_acf_blocks_init()
             'title'             => __('Event-template'), // human readable thing
             'description'       => __('Template used to display events at Gathenhielmska'),
             'render_template'   => 'template-parts/blocks/events/events.php', // important!
-            'icon' => 'dashicons-editor-insertmore', // icon that appears in the editor
+            'icon' => 'calendar-alt', // icon that appears in the editor
             'keywords' => ['events', 'gathenhielmska', 'company'] // to make it more searchable, max 3
         ));
 
@@ -94,8 +94,25 @@ function my_acf_blocks_init()
             'title'             => __('Template, About us'), // human readable thing
             'description'       => __('Template used to display information about at Gathenhielmska'),
             'render_template'   => 'template-parts/blocks/about-us/about-us.php', // important!
-            'icon' => 'video-alt2', // icon that appears in the editor
+            'icon' => 'info', // icon that appears in the editor
             'keywords' => ['about', 'gathenhielmska'] // to make it more searchable, max 3
         ));
     }
 }
+
+// Fetch
+// function fetch_posts()
+// {
+//     $data = get_posts(['post_type' => 'videos']);
+//     echo json_encode($data);
+//     wp_die();
+// };
+// add_action('wp_ajax_nopriv_fetch_posts', 'fetch_posts');
+// add_action('wp_ajax_fetch_posts', 'fetch_posts');
+
+// function my_enqueue()
+// {
+//     wp_enqueue_script('ajax-script', get_template_directory_uri() . '/../../resources/scripts/app.js', array('jquery'));
+//     wp_localize_script('ajax-script', 'my_ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
+// }
+// add_action('wp_enqueue_scripts', 'my_enqueue');

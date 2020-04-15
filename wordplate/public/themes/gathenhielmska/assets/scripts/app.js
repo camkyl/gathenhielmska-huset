@@ -125,7 +125,58 @@ var navSlide = function navSlide() {
   });
 };
 
-navSlide(); // console.log(burger);
+navSlide(); // Fetching videos
+
+var videosUrl = "http://localhost:1337/wp-json/wp/v2/videos";
+var url = "".concat(window.location.origin, "/wp-json/wp/v2/videos"); // Videos-tab
+
+var fetchVideos = document.querySelector(".fetch-videos"); // Div where videos will be appended
+
+var videosArchive = document.querySelector(".archive__videos");
+fetchVideos.addEventListener("click", function (e) {
+  // Prevents redirection to page
+  e.preventDefault(); // Removed the images if the user clicks on videos-tab
+
+  imagesArchive.innerHTML = ""; // Focus
+
+  fetchVideos.classList.add('--active');
+  fetchImages.classList.remove('--active');
+  fetch(videosUrl).then(function (response) {
+    return response.json();
+  }).then(function (videos) {
+    videos.forEach(function (video) {
+      var videoContent = document.createElement("article");
+      videoContent.classList.add("archive__videos__single-video");
+      videoContent.innerHTML = video.content.rendered;
+      videosArchive.appendChild(videoContent);
+    });
+  });
+}); // Fetching images
+
+var imagesUrl = "http://localhost:1337/wp-json/wp/v2/images";
+var url2 = "".concat(window.location.origin, "/wp-json/wp/v2/images"); // Images-tab
+
+var fetchImages = document.querySelector(".fetch-images");
+var imagesArchive = document.querySelector(".archive__images");
+fetchImages.addEventListener("click", function (e) {
+  // Prevents redirection to page
+  e.preventDefault(); // Removes the videos if the user clicks on images-tab
+
+  videosArchive.innerHTML = ""; // Focus
+
+  fetchImages.classList.add('--active');
+  fetchVideos.classList.remove('--active');
+  fetch(imagesUrl).then(function (response) {
+    return response.json();
+  }).then(function (images) {
+    images.forEach(function (image) {
+      var imageContent = document.createElement("article");
+      imageContent.classList.add("archive__images--single-image");
+      imageContent.innerHTML = image.content.rendered;
+      imagesArchive.appendChild(imageContent);
+    });
+  });
+});
 
 /***/ }),
 

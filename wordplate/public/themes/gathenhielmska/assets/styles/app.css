@@ -698,7 +698,7 @@ main {
 
 body {
   overflow-x: hidden;
-  background-color: #EAD6B8;
+  background-color: #F6E5CA;
 }
 
 .header {
@@ -858,7 +858,7 @@ a.button {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  background-color: #EAD6B8;
+  background-color: #F6E5CA;
   /* Hero image */
   /* Program section */
   /* About section */
@@ -1040,7 +1040,7 @@ a.button {
 
 .businesses {
   width: 100vw;
-  background-color: #EAD6B8;
+  background-color: #F6E5CA;
 }
 
 .businesses__content-wrapper {
@@ -1104,7 +1104,7 @@ a.button {
 
 .news {
   width: 100vw;
-  background-color: #EAD6B8;
+  background-color: #F6E5CA;
 }
 
 .news__article {
@@ -1206,7 +1206,7 @@ a.button {
 /* single-news.php */
 
 .single-news {
-  background-color: #EAD6B8;
+  background-color: #F6E5CA;
   width: 100vw;
 }
 
@@ -1391,11 +1391,12 @@ a.button {
 .archive {
   width: 100vw;
   background-color: #334859;
+  /* Images */
+  /* Videos */
 }
 
 .archive__images {
   width: 90vw;
-  min-height: 80vh;
   -webkit-column-count: 2;
   -webkit-column-gap: 4px;
   -moz-column-count: 2;
@@ -1439,6 +1440,24 @@ a.button {
   object-position: center 10%;
 }
 
+.archive__videos {
+  width: 92vw;
+}
+
+.archive__videos__single-video {
+  width: 92vw;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.archive__videos__single-video .iframe-wrapper {
+  width: 100%;
+}
+
+.archive__videos__single-video .iframe-wrapper iframe {
+  width: 100%;
+}
+
 .archive__alternatives {
   display: flex;
   justify-content: center;
@@ -1465,6 +1484,14 @@ a.button {
   text-decoration: none;
   margin: 0px;
   padding: 5px 0px;
+}
+
+.\--active {
+  background-color: #F9F3EB;
+}
+
+.\--active a {
+  color: #334859;
 }
 
 .footer {
