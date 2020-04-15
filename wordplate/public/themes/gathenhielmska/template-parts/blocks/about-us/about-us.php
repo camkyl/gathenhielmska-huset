@@ -10,11 +10,11 @@ $image = get_field("image");
 
 ?>
 <section class="about-us">
-        <div class="heading-wrapper">
-            <div class="heading-wrapper__left"></div>
-            <h3>Om huset</h3>
-            <div class="heading-wrapper__right"></div>
-        </div>
+    <div class="heading-wrapper">
+        <div class="heading-wrapper__left"></div>
+        <h3>Om huset</h3>
+        <div class="heading-wrapper__right"></div>
+    </div>
 
     <div class="about-us__content">
         <p class="about-us__para"><?php echo $description; ?></p>

@@ -1,7 +1,7 @@
 .news {
   @extend %flex-col-cen;
   width: 100vw;
-  background-color: $oppethav;
+  background-color: $murgrona;
 
   &__article {
     @extend %flex-col-cen;
@@ -56,28 +56,34 @@
 
   & h4 {
     font-family: $newsHeadings;
+    font-size: 1.5rem;
     font-weight: 600;
     margin: 0;
 
     @include respond-to(wide-screens) {
-      font-size: 1.6rem;
+      font-size: 2rem;
     }
   }
 
   & p {
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 300;
     margin: 0;
 
     @include respond-to(wide-screens) {
       margin: 6px 10px 15px 0px;
-      font-size: 0.9rem;
+      font-size: 1.2rem;
     }
   }
 
   & a {
-    font-size: 0.875rem;
+    font-size: 1.12rem;
     font-weight: 700;
+
+    @include respond-to(wide-screens) {
+      margin: 6px 10px 15px 0px;
+      font-size: 1.5rem;
+    }
   }
 
   & .date {
@@ -99,20 +105,20 @@
   background-color: $oppethav;
   width: 100vw;
 
-  &__title {
-    width: 100%;
-    height: 40vh;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    background-color: rgba(40, 40, 40, 0.36);
+  // &__title {
+  //   width: 100%;
+  //   height: 40vh;
+  //   position: absolute;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   z-index: 2;
+  //   background-color: rgba(40, 40, 40, 0.36);
 
-    @include respond-to(wide-screens) {
-      height: 70vh;
-    }
-  }
+  //   @include respond-to(wide-screens) {
+  //     height: 70vh;
+  //   }
+  // }
 
   & h3 {
     color: $timglas;
