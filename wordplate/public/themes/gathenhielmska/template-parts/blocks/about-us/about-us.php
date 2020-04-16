@@ -18,6 +18,8 @@ $image = get_field("image");
 
     <div class="about-us__content">
         <p class="about-us__para"><?php echo $description; ?></p>
-        <img class="about-us__img" src="<?php echo $image["url"]; ?>" alt="Timeline of Gathenhielmska">
+        <div class="about-us__img">
+            <img src="<?php echo $image["url"]; ?>" alt="Timeline of Gathenhielmska">
+        </div>
     </div>
 </section>

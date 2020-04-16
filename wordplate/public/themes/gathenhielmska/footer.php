@@ -15,14 +15,18 @@
         </div>
 
         <div class="footer__links_wrapper__right">
-            <h3>Hitta hit</h3>
-            <p>Stigbergstorget 7</p>
-            <p>414 63 Göteborg</p>
+            <div class="deskt">
+                <h3>Hitta hit</h3>
+                <p>Stigbergstorget 7</p>
+                <p>414 63 Göteborg</p>
+            </div>
 
-            <h3 class="footer__links_wrapper__right__space">Följ oss</h3>
-            <a href="">Facebook</a>
-            <a href="">Instagram</a>
-            <a href="">Youtube</a>
+            <div class="deskt">
+                <h3>Följ oss</h3>
+                <a href="">Facebook</a>
+                <a href="">Instagram</a>
+                <a href="">Youtube</a>
+            </div>
         </div>
     </div>
 

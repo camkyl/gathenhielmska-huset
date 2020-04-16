@@ -619,7 +619,6 @@ a:visited {
   color: #000000;
 }
 
-.sponsors,
 .archive__alternatives-images,
 .archive__alternatives-videos,
 .events,
@@ -1986,8 +1985,7 @@ a.button {
 
 @media only screen and (min-width: 830px) {
   .footer {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
@@ -1997,6 +1995,13 @@ a.button {
   width: 100%;
   justify-content: space-between;
   margin: 5vh 0;
+}
+
+@media only screen and (min-width: 830px) {
+  .footer__links_wrapper {
+    width: 100vw;
+    justify-content: flex-start;
+  }
 }
 
 .footer__links_wrapper p {
@@ -2015,6 +2020,18 @@ a.button {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+@media only screen and (min-width: 830px) {
+  .footer__links_wrapper__left {
+    width: 30vw;
+  }
+}
+
+@media only screen and (min-width: 830px) {
+  .footer__links_wrapper__right {
+    width: 60vw;
+  }
 }
 
 .footer__links_wrapper__left h3,
@@ -2040,17 +2057,28 @@ a.button {
   margin-right: 4vw;
 }
 
+@media only screen and (min-width: 830px) {
+  .footer__links_wrapper__right {
+    flex-direction: row;
+  }
+}
+
+.footer__links_wrapper__right .deskt {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 830px) {
+  .footer__links_wrapper__right .deskt {
+    width: 50%;
+  }
+}
+
 .footer__straight-line {
   height: 1px;
   margin: 0 auto;
   width: 92vw;
   background-color: #F9F3EB;
-}
-
-@media only screen and (min-width: 830px) {
-  .footer__straight-line {
-    display: none;
-  }
 }
 
 .footer__links_wrapper__left a,
@@ -2072,21 +2100,23 @@ a.button {
 }
 
 .sponsors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 92vw;
   margin: 10px 0;
-  justify-content: space-between;
-}
-
-@media only screen and (min-width: 830px) {
-  .sponsors {
-    display: none;
-  }
 }
 
 .sponsors__images {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+@media only screen and (min-width: 830px) {
+  .sponsors__images {
+    width: 30vw;
+  }
 }
 
 .sponsors__images-wrapper {
@@ -2104,6 +2134,12 @@ a.button {
   margin: 0;
   font-size: 0.65rem;
   display: none;
+}
+
+@media only screen and (min-width: 830px) {
+  .sponsors__text p {
+    display: block;
+  }
 }
 
 a {
@@ -2135,15 +2171,20 @@ a {
 }
 
 .about-us__img {
-  width: 100%;
+  width: 90%;
   height: auto;
   margin: 20px 0;
+}
+
+.about-us__img img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 @media only screen and (min-width: 830px) {
   .about-us__img {
-    width: 96vw;
+    width: 86%;
   }
 }
 
