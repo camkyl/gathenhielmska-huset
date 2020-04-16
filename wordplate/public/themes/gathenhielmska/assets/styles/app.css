@@ -2201,6 +2201,7 @@ a {
 
 .contact-rooms {
   width: 100vw;
+  padding: 40px 0;
   background-color: #334859;
 }
 
@@ -2208,7 +2209,7 @@ a {
   .contact-rooms {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 20vw;
+    padding: 0 20vw 50px 20vw;
     justify-content: space-between;
   }
 }
@@ -2236,8 +2237,9 @@ a {
 
 .contact-rooms__single__title {
   position: absolute;
-  margin: 0 4vw;
+  margin: 0 auto;
   text-transform: uppercase;
+  text-align: center;
   top: 30%;
   font-size: 2.1rem;
   font-family: "Source Serif Pro", serif;
@@ -2252,7 +2254,8 @@ a {
 
 .contact-rooms__single__text {
   position: absolute;
-  margin: 0 4vw;
+  margin: 0 auto;
+  padding: 0 12px;
   text-align: center;
   top: 43%;
   font-family: "Muli", sans-serif;

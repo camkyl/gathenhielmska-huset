@@ -18,7 +18,7 @@
 
 <div class="contact-rooms">
     <div class="contact-rooms__single">
-        <img class="contact-rooms__single__img" src="../../uploads/italia.png" alt="Italia room">
+        <img class="contact-rooms__single__img" src="../../uploads/italia.png" alt="Room Italia">
         <h3 class="contact-rooms__single__title">
             Italiarummet
         </h3>
@@ -27,7 +27,7 @@
         </p>
     </div>
     <div class="contact-rooms__single">
-        <img class="contact-rooms__single__img" src="../../uploads/salongen.png" alt="Italia room">
+        <img class="contact-rooms__single__img" src="../../uploads/salongen.png" alt="Room Salonge">
         <h3 class="contact-rooms__single__title">
             Salongen
         </h3>
@@ -36,7 +36,7 @@
         </p>
     </div>
     <div class="contact-rooms__single">
-        <img class="contact-rooms__single__img" src="../../uploads/kungsalen.png" alt="Italia room">
+        <img class="contact-rooms__single__img" src="../../uploads/kungsalen.png" alt="Room Kungsalen">
         <h3 class="contact-rooms__single__title">
             Kungsalen
         </h3>
@@ -45,7 +45,7 @@
         </p>
     </div>
     <div class="contact-rooms__single">
-        <img class="contact-rooms__single__img" src="../../uploads/galleriet.png" alt="Italia room">
+        <img class="contact-rooms__single__img" src="../../uploads/galleriet.png" alt="Room Galleriet">
         <h3 class="contact-rooms__single__title">
             Galleriet
         </h3>
@@ -54,7 +54,7 @@
         </p>
     </div>
     <div class="contact-rooms__single">
-        <img class="contact-rooms__single__img" src="../../uploads/versailles.png" alt="Italia room">
+        <img class="contact-rooms__single__img" src="../../uploads/versailles.png" alt="Room Versailles">
         <h3 class="contact-rooms__single__title">
             Versailles
         </h3>
@@ -63,7 +63,7 @@
         </p>
     </div>
     <div class="contact-rooms__single">
-        <img class="contact-rooms__single__img" src="../../uploads/hyrindig.png" alt="Italia room">
+        <img class="contact-rooms__single__img" src="../../uploads/italia.png" alt="Room Hyrindig">
         <h3 class="contact-rooms__single__title">
             Hyr in dig
         </h3>
