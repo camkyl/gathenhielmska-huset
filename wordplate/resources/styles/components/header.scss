@@ -236,8 +236,9 @@ body {
     width: 100vw;
     height: 5vh;
     padding-left: 5vw;
-    background-color: $timglas;
+    background-color: $adelsblod;
     border: none;
+    color: $timglas;
   }
 }
 
@@ -257,8 +258,13 @@ body {
       height: 100%;
       border: none;
       outline: none;
-      border-bottom: 1px solid black;
-      background-color: $timglas;
+      border-bottom: 1px solid $timglas;
+      background-color: $adelsblod;
+      color: $timglas;
+    }
+
+    &__form__input::placeholder {
+      color: $timglas;
     }
   }
 }

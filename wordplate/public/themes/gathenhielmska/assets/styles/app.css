@@ -942,8 +942,9 @@ body {
   width: 100vw;
   height: 5vh;
   padding-left: 5vw;
-  background-color: #F9F3EB;
+  background-color: #475B6C;
   border: none;
+  color: #F9F3EB;
 }
 
 .search-desktop {
@@ -965,8 +966,21 @@ body {
     height: 100%;
     border: none;
     outline: none;
-    border-bottom: 1px solid black;
-    background-color: #F9F3EB;
+    border-bottom: 1px solid #F9F3EB;
+    background-color: #475B6C;
+    color: #F9F3EB;
+  }
+
+  .search-desktop__form__input::-webkit-input-placeholder {
+    color: #F9F3EB;
+  }
+
+  .search-desktop__form__input::-ms-input-placeholder {
+    color: #F9F3EB;
+  }
+
+  .search-desktop__form__input::placeholder {
+    color: #F9F3EB;
   }
 }
 
