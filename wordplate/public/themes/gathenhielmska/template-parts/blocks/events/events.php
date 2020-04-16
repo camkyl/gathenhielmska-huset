@@ -22,10 +22,7 @@ $description = get_field("description");
     <h2 class="events__wrapper__title"><?php echo the_title(); ?></h2>
     <p class="events__wrapper__date"><?php echo $date; ?></p>
     <p class="events__wrapper__text"><?php echo $description; ?></p>
-
     <button class="program-btn">
         <a class="program-btn__a" href="<?php the_permalink(); ?>">Läs mer</a>
     </button>
-
-
 </div>

@@ -1527,19 +1527,22 @@ a.button {
 @media only screen and (min-width: 830px) {
   .events {
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start;
+    width: 100vw;
+    padding: 0 2vw;
+    margin: 0 auto;
   }
 }
 
 .events__wrapper {
   width: 100%;
-  margin: 0 0 3vh 0;
+  margin: 0 0 6vh 0;
 }
 
 @media only screen and (min-width: 830px) {
   .events__wrapper {
     width: 30vw;
-    justify-content: space-around;
   }
 }
 
@@ -1549,8 +1552,8 @@ a.button {
 
 @media only screen and (min-width: 830px) {
   .events__wrapper__img {
-    height: 30vh;
     object-fit: cover;
+    height: 30vw;
     width: 30vw;
   }
 }
@@ -1565,6 +1568,7 @@ a.button {
 @media only screen and (min-width: 830px) {
   .events__wrapper__straight-line {
     margin-left: 0;
+    width: 10vw;
   }
 }
 
@@ -1610,10 +1614,11 @@ a.button {
 
 .events__wrapper__text {
   line-height: 1.5rem;
-  max-height: 10.5rem;
+  height: 10.5rem;
   overflow: hidden;
   font-weight: 300;
   margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 @media only screen and (min-width: 830px) {
@@ -1627,7 +1632,7 @@ a.button {
   margin: 3vh auto;
 }
 
-.events__wrapper button {
+.program-btn {
   all: unset;
   background-color: #CC7B5C;
   border-radius: 7px;
@@ -1637,14 +1642,20 @@ a.button {
   color: #F9F3EB;
   text-align: center;
   padding: 10px 0;
-  margin: 16px 0;
-  width: 260px;
+  margin-left: 5vw;
+  width: 90vw;
 }
 
 @media only screen and (min-width: 830px) {
-  .events__wrapper button {
+  .program-btn {
     font-size: 1.125rem;
+    width: 92%;
+    margin: 0;
   }
+}
+
+.program-btn a {
+  color: #F9F3EB;
 }
 
 .program-title {
@@ -1659,11 +1670,32 @@ a.button {
 .single-program {
   position: relative;
   overflow-y: hidden;
+  padding-bottom: 5vh;
+  background-color: #334859;
+}
+
+.single-program .events__wrapper {
+  background-color: #334859;
+}
+
+.single-program .events__wrapper__img {
+  width: 100vw;
+}
+
+@media only screen and (min-width: 830px) {
+  .single-program .events__wrapper__straight-line {
+    width: 90vw;
+    margin-left: 5vw;
+  }
 }
 
 .single-program .events__img {
   overflow-y: hidden;
   object-position: center center;
+}
+
+.single-program button {
+  display: none;
 }
 
 .archive {
@@ -1912,6 +1944,10 @@ a {
 }
 
 .nf-form-fields-required {
+  display: none;
+}
+
+.contact-title {
   display: none;
 }
 
