@@ -124,7 +124,7 @@
   @include respond-to(wide-screens) {
     font-size: 1.125rem;
     width: 92%;
-    margin: 0 auto;
+    margin: 0;
   }
 
   a {
@@ -175,7 +175,7 @@
   width: 92vw;
 
   @include respond-to(wide-screens) {
-  width: 60vw;
+    width: 60vw;
   }
 }
 
@@ -188,9 +188,8 @@
 .single-program .events__wrapper__category,
 .single-program .events__wrapper__title,
 .single-program .events__wrapper__date {
-
   @include respond-to(wide-screens) {
-  text-align: center;
+    text-align: center;
   }
 }
 
