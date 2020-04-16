@@ -864,6 +864,13 @@ body {
   font-weight: bold;
 }
 
+@media only screen and (min-width: 830px) {
+  .nav-language li {
+    color: #F9F3EB;
+    font-size: 1.6rem;
+  }
+}
+
 .nav-ul {
   padding: 0;
 }
@@ -918,7 +925,7 @@ body {
 
 @media only screen and (min-width: 830px) {
   .nav-active {
-    height: 60vh;
+    height: 100vh;
     width: 20vw;
     display: block;
     margin-top: 8vh;
