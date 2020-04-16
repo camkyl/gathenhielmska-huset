@@ -226,7 +226,11 @@ body {
 }
 
 .search-desktop-active {
-  display: flex;
+  display: none;
+
+  @include respond-to(wide-screens) {
+    display: flex;
+  }
 }
 
 .search-active {

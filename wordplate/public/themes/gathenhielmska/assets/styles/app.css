@@ -928,7 +928,13 @@ body {
 }
 
 .search-desktop-active {
-  display: flex;
+  display: none;
+}
+
+@media only screen and (min-width: 830px) {
+  .search-desktop-active {
+    display: flex;
+  }
 }
 
 .search-active {
@@ -1518,18 +1524,49 @@ a.button {
   width: 100vw;
 }
 
-.events__img {
-  width: 100%;
+@media only screen and (min-width: 830px) {
+  .events {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .events__wrapper {
-  width: 92%;
+  width: 100%;
+  overflow-y: hidden;
+  margin: 0 0 3vh 0;
+}
+
+@media only screen and (min-width: 830px) {
+  .events__wrapper {
+    width: 30vw;
+    justify-content: space-around;
+  }
+}
+
+.events__wrapper__img {
+  width: 100vw;
+}
+
+@media only screen and (min-width: 830px) {
+  .events__wrapper__img {
+    height: 30vh;
+    object-fit: cover;
+    width: 30vw;
+  }
 }
 
 .events__wrapper__straight-line {
   height: 1px;
   width: 30vw;
   background-color: #F9F3EB;
+  margin-left: 5vw;
+}
+
+@media only screen and (min-width: 830px) {
+  .events__wrapper__straight-line {
+    margin-left: 0;
+  }
 }
 
 .events__wrapper__category {
@@ -1537,17 +1574,18 @@ a.button {
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin: 10px 0;
+  margin: 10px 0 10px 5vw;
 }
 
 @media only screen and (min-width: 830px) {
   .events__wrapper__category {
     font-size: 0.875rem;
+    margin-left: 0;
   }
 }
 
 .events__wrapper h2 {
-  margin: 10px 0;
+  margin: 10px 5vw;
   font-family: "Source Serif Pro", serif;
   font-size: 2rem;
   text-transform: uppercase;
@@ -1561,6 +1599,13 @@ a.button {
 
 .events__wrapper__date {
   font-weight: 300;
+  margin-left: 5vw;
+}
+
+@media only screen and (min-width: 830px) {
+  .events__wrapper__date {
+    margin-left: 0;
+  }
 }
 
 .events__wrapper__text {
@@ -1568,11 +1613,13 @@ a.button {
   max-height: 10.5rem;
   overflow: hidden;
   font-weight: 300;
+  margin-left: 5vw;
 }
 
 @media only screen and (min-width: 830px) {
   .events__wrapper__text {
     font-size: 1.125rem;
+    margin-left: 0;
   }
 }
 
@@ -1580,8 +1627,16 @@ a.button {
   margin: 3vh auto;
 }
 
-.events a {
-  width: 92%;
+.events__wrapper a.button {
+  width: 25vw;
+  margin-left: 5vw;
+  margin-bottom: 3vh;
+}
+
+@media only screen and (min-width: 830px) {
+  .events__wrapper a.button {
+    width: 25vw;
+  }
 }
 
 .single-program {
@@ -1840,10 +1895,6 @@ a {
 }
 
 .nf-form-fields-required {
-  display: none;
-}
-
-h2 {
   display: none;
 }
 

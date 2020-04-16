@@ -5,21 +5,40 @@
   background-color: $murgrona;
   width: 100vw;
 
-  // @include respond-to(handhelds/wide-screens) {
-
-  // }
-
-  &__img {
-    width: 100%;
+  @include respond-to(wide-screens) {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   &__wrapper {
-    width: 92%;
+    width: 100%;
+    overflow-y: hidden;
+    margin: 0 0 3vh 0;
+
+    @include respond-to(wide-screens) {
+      width: 30vw;
+      justify-content: space-around;
+    }
+
+    &__img {
+      width: 100vw;
+
+      @include respond-to(wide-screens) {
+        height: 30vh;
+        object-fit: cover;
+        width: 30vw;
+      }
+    }
 
     &__straight-line {
       height: 1px;
       width: 30vw;
       background-color: $timglas;
+      margin-left: 5vw;
+
+      @include respond-to(wide-screens) {
+        margin-left: 0;
+      }
     }
 
     &__category {
@@ -27,15 +46,16 @@
       font-size: 0.75rem;
       font-weight: bold;
       text-transform: uppercase;
-      margin: 10px 0;
+      margin: 10px 0 10px 5vw;
 
       @include respond-to(wide-screens) {
         font-size: 0.875rem;
+        margin-left: 0;
       }
     }
 
     & h2 {
-      margin: 10px 0;
+      margin: 10px 5vw;
       font-family: $newsHeadings;
       font-size: 2rem;
       text-transform: uppercase;
@@ -47,6 +67,11 @@
 
     &__date {
       font-weight: 300;
+      margin-left: 5vw;
+
+      @include respond-to(wide-screens) {
+        margin-left: 0;
+      }
     }
 
     &__text {
@@ -54,9 +79,11 @@
       max-height: 10.5rem;
       overflow: hidden;
       font-weight: 300;
+      margin-left: 5vw;
 
       @include respond-to(wide-screens) {
         font-size: 1.125rem;
+        margin-left: 0;
       }
     }
   }
@@ -66,8 +93,14 @@
   margin: 3vh auto;
 }
 
-.events a {
-  width: 92%;
+.events__wrapper a.button {
+  width: 25vw;
+  margin-left: 5vw;
+  margin-bottom: 3vh;
+
+  @include respond-to(wide-screens) {
+    width: 25vw;
+  }
 }
 
 // single-program.php

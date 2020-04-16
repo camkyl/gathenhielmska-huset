@@ -10,7 +10,6 @@
             <!--This will be the title of the student, in our case the program or a person working at gathenhielmska-->
             <?php the_content(); ?>
 
-
         <?php endwhile; ?>
 
     <?php endif; ?>
