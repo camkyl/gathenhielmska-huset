@@ -1562,13 +1562,12 @@ a.button {
 @media only screen and (min-width: 830px) {
   .events {
     flex-direction: row;
-    flex-wrap: wrap;
+    align-items: flex-start;
   }
 }
 
 .events__wrapper {
   width: 100%;
-  overflow-y: hidden;
   margin: 0 0 3vh 0;
 }
 
@@ -1628,6 +1627,7 @@ a.button {
 
 @media only screen and (min-width: 830px) {
   .events__wrapper h2 {
+    margin: 0;
     font-size: 2.2rem;
   }
 }
@@ -1660,6 +1660,35 @@ a.button {
 
 .page-title div {
   margin: 3vh auto;
+}
+
+.events__wrapper button {
+  all: unset;
+  background-color: #CC7B5C;
+  border-radius: 7px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-family: "Muli", sans-serif;
+  font-size: 0.875rem;
+  color: #F9F3EB;
+  text-align: center;
+  padding: 10px 0;
+  margin: 16px 0;
+  width: 260px;
+}
+
+@media only screen and (min-width: 830px) {
+  .events__wrapper button {
+    font-size: 1.125rem;
+  }
+}
+
+.program-title {
+  background-color: #334859;
+}
+
+.program-title .heading-wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .single-program {
