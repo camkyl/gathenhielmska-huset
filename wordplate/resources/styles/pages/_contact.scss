@@ -2,11 +2,20 @@
 .nf-form-fields-required {
   display: none;
 }
+//
+
+.contact-page {
+  background-color: $murgrona;
+}
 
 .contact-page .heading-wrapper {
   width: 100vw;
   margin: 0 auto;
   background-color: $murgrona;
+
+  @include respond-to(wide-screens) {
+    width: 73vw;
+  }
 }
 
 .contact-page .heading-wrapper__left {
@@ -26,6 +35,11 @@
   width: 92vw;
   margin: 0 auto;
   color: $timglas;
+  font-family: $text;
+
+  @include respond-to(wide-screens) {
+    width: 60vw;
+  }
 }
 
 .contact-title {
@@ -34,6 +48,10 @@
 
 .form .nf-form-content {
   padding: 0;
+
+  @include respond-to(wide-screens) {
+    width: 60vw;
+  }
 }
 
 // Images of the different rooms
@@ -42,6 +60,13 @@
   width: 100vw;
   background-color: $murgrona;
 
+  @include respond-to(wide-screens) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20vw;
+    justify-content: space-between;
+  }
+
   &__single {
     width: 92vw;
     background-color: $murgrona;
@@ -49,23 +74,37 @@
     justify-content: center;
     align-items: center;
     margin: 0vw 4vw 4vw 4vw;
+    position: relative;
+
+    @include respond-to(wide-screens) {
+      margin: 1vw 0;
+      width: 29vw;
+    }
 
     &__img {
       width: 100%;
-      position: relative;
     }
 
     &__title {
       position: absolute;
       margin: 0 4vw;
       text-transform: uppercase;
-      top: 10px;
+      top: 30%;
+      font-size: 2.1rem;
+      font-family: $newsHeadings;
+
+      @include respond-to(wide-screens) {
+        top: 30%;
+        width: 80%;
+      }
     }
 
     &__text {
       position: absolute;
       margin: 0 4vw;
       text-align: center;
+      top: 43%;
+      font-family: $text;
     }
   }
 }
@@ -80,6 +119,10 @@
   width: 92vw;
   margin: 2vh auto;
   color: $murgrona;
+
+  @include respond-to(wide-screens) {
+    width: 60vw;
+  }
 }
 
 .form__name {
@@ -87,11 +130,21 @@
   margin: 0 4vw;
 }
 
+.nf-field {
+  @include respond-to(wide-screens) {
+    width: 60vw;
+  }
+}
+
 #nf-field-5-wrap,
 #nf-field-6-wrap,
 #nf-field-7-wrap {
   width: 92vw;
   margin: 0 auto;
+
+  @include respond-to(wide-screens) {
+    width: 60vw;
+  }
 }
 
 #nf-field-5,
@@ -107,13 +160,25 @@
   color: black;
 }
 
+#nf-field-8-container {
+  @include respond-to(wide-screens) {
+    display: flex;
+    width: 25vw;
+    justify-content: center;
+  }
+}
+
 #nf-field-8 {
   width: 92vw;
   background: transparent;
-  // border: 1px solid white;
   border-radius: 7px;
   background-color: $eldsjal;
   margin: 0 4vw;
+
+  @include respond-to(wide-screens) {
+    width: 25vw;
+    margin: 0;
+  }
 }
 
 #nf-form-title-2 {
@@ -129,8 +194,20 @@
   flex-direction: column;
   margin: 0 auto;
 
+  @include respond-to(wide-screens) {
+    padding: 0 20vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   &__team {
     display: flex;
+
+    @include respond-to(wide-screens) {
+      width: 19vw;
+    }
 
     &__left {
       width: 100vw;
@@ -144,12 +221,24 @@
 
 .in-charge-wrapper__team__left {
   margin-bottom: 3vh;
+
+  @include respond-to(wide-screens) {
+    width: 20vw;
+  }
+}
+
+.in-charge-wrapper__team__left h3 {
+  margin-top: 2vh;
 }
 
 .in-charge-wrapper__team__left h3,
 .in-charge-wrapper__team__left p {
   text-align: center;
   margin: 1vh 0;
+
+  @include respond-to(wide-screens) {
+    text-align: left;
+  }
 }
 
 .in-charge-wrapper__team__left img {
