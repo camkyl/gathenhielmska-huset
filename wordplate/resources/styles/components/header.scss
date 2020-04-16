@@ -17,12 +17,33 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $timglas;
+  background-color: $adelsblod;
   height: 8vh;
   overflow-x: hidden;
 
   &__left {
-    margin-left: 5vw;
+    margin-left: 10px;
+
+    &-logo {
+      height: 7vh;
+      width: 30vw;
+
+      a {
+        font-size: 0.1px;
+      }
+
+      @include respond-to(wide-screens) {
+        margin-left: 20px;
+        height: 6vh;
+        width: 12vw;
+      }
+
+      & img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
   }
 
   &__right {
@@ -65,7 +86,7 @@ body {
         height: 3px;
         width: 7vw;
         margin-top: 5px;
-        background-color: black;
+        background-color: $timglas;
         border-radius: 1px;
 
         @include respond-to(wide-screens) {
@@ -76,7 +97,7 @@ body {
       &__line1 {
         height: 3px;
         width: 7vw;
-        background-color: black;
+        background-color: $timglas;
         border-radius: 1px;
 
         @include respond-to(wide-screens) {
@@ -94,7 +115,7 @@ body {
   width: 100vw;
   top: 0;
   left: 0;
-  background-color: $timglas;
+  background-color: $adelsblod;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -102,14 +123,10 @@ body {
   transition: transform 0.5s ease-in;
   transition: opacity 0.4s ease-in-out;
   z-index: 2;
-  background-image: url("../../icons/background-logo.png");
+  background-image: url("../../icons/ingela.png");
   background-repeat: no-repeat;
   background-position: center;
-
-  @include respond-to(wide-screens) {
-    background-position: 100% 100%;
-    background-size: 200px 200px;
-  }
+  background-size: 100% auto;
 }
 
 .nav-language li:nth-child(1) {
@@ -122,7 +139,7 @@ body {
 
 .nav ul li,
 .nav-ul li {
-  margin: 2vh 0;
+  margin: 1.5vh 0;
   text-transform: uppercase;
   padding: 6px 25px;
   text-align: center;
@@ -133,6 +150,11 @@ body {
     padding-left: 1vw;
     margin: 0;
   }
+
+  a {
+    color: $timglas;
+    font-size: 1.6rem;
+  }
 }
 
 .nav-language .hamburger-line1,
@@ -142,7 +164,7 @@ body {
 }
 
 .toggle .hamburger-line1 {
-  transform: rotate(-45deg) translate(-5px, 5px);
+  transform: rotate(-45deg) translate(-6px, 5px);
 }
 
 .toggle .hamburger-line2 {

@@ -660,13 +660,6 @@ a:visited {
 }
 
 /*
-.footer {
-    @extend %flex-center;
-    @extend %flex-column;
-}
-*/
-
-/*
 form {
     display: flex;
     width: 80vw;
@@ -709,13 +702,36 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #F9F3EB;
+  background-color: #475B6C;
   height: 8vh;
   overflow-x: hidden;
 }
 
 .header__left {
-  margin-left: 5vw;
+  margin-left: 10px;
+}
+
+.header__left-logo {
+  height: 7vh;
+  width: 30vw;
+}
+
+.header__left-logo a {
+  font-size: 0.1px;
+}
+
+@media only screen and (min-width: 830px) {
+  .header__left-logo {
+    margin-left: 20px;
+    height: 6vh;
+    width: 12vw;
+  }
+}
+
+.header__left-logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .header__right {
@@ -763,7 +779,7 @@ body {
   height: 3px;
   width: 7vw;
   margin-top: 5px;
-  background-color: black;
+  background-color: #F9F3EB;
   border-radius: 1px;
 }
 
@@ -777,7 +793,7 @@ body {
 .header__right__hamburger__line1 {
   height: 3px;
   width: 7vw;
-  background-color: black;
+  background-color: #F9F3EB;
   border-radius: 1px;
 }
 
@@ -794,7 +810,7 @@ body {
   width: 100vw;
   top: 0;
   left: 0;
-  background-color: #F9F3EB;
+  background-color: #475B6C;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -802,17 +818,10 @@ body {
   transition: transform 0.5s ease-in;
   transition: opacity 0.4s ease-in-out;
   z-index: 2;
-  background-image: url(../images/background-logo.png?4d9ddd1bee1d10c6a5a4668b9921d39f);
+  background-image: url(../images/ingela.png?63f3afbc0c3abe92ef17e3c3d59b4388);
   background-repeat: no-repeat;
   background-position: center;
-}
-
-@media only screen and (min-width: 830px) {
-  .nav,
-  .flag-menu {
-    background-position: 100% 100%;
-    background-size: 200px 200px;
-  }
+  background-size: 100% auto;
 }
 
 .nav-language li:nth-child(1) {
@@ -825,7 +834,7 @@ body {
 
 .nav ul li,
 .nav-ul li {
-  margin: 2vh 0;
+  margin: 1.5vh 0;
   text-transform: uppercase;
   padding: 6px 25px;
   text-align: center;
@@ -841,6 +850,12 @@ body {
   }
 }
 
+.nav ul li a,
+.nav-ul li a {
+  color: #F9F3EB;
+  font-size: 1.6rem;
+}
+
 .nav-language .hamburger-line1,
 .hamburger-line2,
 .hamburger-line3 {
@@ -848,7 +863,7 @@ body {
 }
 
 .toggle .hamburger-line1 {
-  transform: rotate(-45deg) translate(-5px, 5px);
+  transform: rotate(-45deg) translate(-6px, 5px);
 }
 
 .toggle .hamburger-line2 {

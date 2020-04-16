@@ -14,9 +14,11 @@
 
     <header class="header">
         <div class="header__left">
-            <a href="/">
-                <img src="../../icons/menulogo.png" alt="logo">
-            </a>
+            <div class="header__left-logo">
+                <a href="/">
+                    <img src="../../icons/logo-ingela.png" alt="logo">
+                </a>
+            </div>
 
             <!--Can't make it work with the echo site_url();, it gives me the adress http://localhost:8000/wordpress >-->
         </div>
