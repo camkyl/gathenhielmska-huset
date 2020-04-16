@@ -1,22 +1,20 @@
 </main>
-<!-- footer -->
+
 <footer class="footer">
     <?php wp_footer(); ?>
 
     <div class="footer__links_wrapper">
-
         <div class="footer__links_wrapper__left">
             <h3>Meny</h3>
-            <p><a href="">Hem</a></p>
-            <p><a href="">Program</a></p>
-            <p><a href="">Arkiv</a></p>
-            <p><a href="">Om huset</a></p>
-            <p><a href="">Kontakt</a></p>
-            <p><a href="">Verksamheter</a></p>
-            <p><a href="">Aktuellt</a></p>
-            <p><a href="">Språk</a></p>
-            <p><a href="">Sök</a></p>
-            <p><a href="">Logga in</a></p>
+            <a href="">Hem</a>
+            <a href="">Program</a>
+            <a href="">Arkiv</a>
+            <a href="">Om huset</a>
+            <a href="">Kontakt</a>
+            <a href="">Verksamheter</a>
+            <a href="">Aktuellt</a>
+            <a href="">Språk</a>
+            <a href="">Sök</a>
         </div>
 
         <div class="footer__links_wrapper__right">
@@ -25,11 +23,10 @@
             <p>414 63 Göteborg</p>
 
             <h3 class="footer__links_wrapper__right__space">Följ oss</h3>
-            <p><a href="">Facebook</a></p>
-            <p><a href="">Instagram</a></p>
-            <p><a href="">Youtube</a></p>
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="">Youtube</a>
         </div>
-
     </div>
 
     <div class="footer__straight-line"></div>
@@ -40,11 +37,18 @@
             <p>Gathenhielmska Huset</p>
         </div>
 
-        <img class="sponsors__image" src="../../icons/studieframjandet.svg">
-        <img class="sponsors__image" src="../../icons/higab.svg">
-        <img class="sponsors__image" src="../../icons/goteborgsstad.png">
+        <div class="sponsors__images">
+            <div class="sponsors__images-wrapper">
+                <img src="../../icons/studieframjandet.png">
+            </div>
+            <div class="sponsors__images-wrapper">
+                <img src="../../icons/higab.svg">
+            </div>
+            <div class="sponsors__images-wrapper">
+                <img src="../../icons/goteborgsstad.png">
+            </div>
+        </div>
     </div>
-
 
 </footer>
 

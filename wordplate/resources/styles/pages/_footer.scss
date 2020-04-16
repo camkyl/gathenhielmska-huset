@@ -1,0 +1,129 @@
+// The footer of the whole website
+.footer {
+  width: 100vw;
+  margin: 0 auto;
+  background-color: $adelsblod;
+  @extend %flex-col-cen;
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  @include respond-to(wide-screens) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__links_wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
+    margin: 5vh 0;
+
+    p {
+      font-size: 1.125rem;
+
+      @include respond-to(wide-screens) {
+        font-size: 1rem;
+      }
+    }
+
+    &__left,
+    &__right {
+      width: 43vw;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__left h3,
+    &__right h3 {
+      font-family: $newsHeadings;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: none;
+
+      @include respond-to(wide-screens) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__left {
+      margin-left: 4vw;
+    }
+
+    &__right {
+      margin-right: 4vw;
+    }
+  }
+
+  &__straight-line {
+    height: 1px;
+    margin: 0 auto;
+    width: 92vw;
+    background-color: $timglas;
+
+    // temporary!
+    @include respond-to(wide-screens) {
+      display: none;
+    }
+
+  }
+}
+
+.footer__links_wrapper__left a,
+.footer__links_wrapper__right a {
+  color: $timglas;
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+
+  @include respond-to(wide-screens) {
+    font-size: 1rem;
+  }
+}
+
+.footer__links_wrapper__right p {
+  margin: 0 0 10px 0;
+}
+
+.sponsors {
+  @extend %flex-center-center;
+  width: 92vw;
+  margin: 10px 0;
+  justify-content: space-between;
+
+  // temporary!
+  @include respond-to(wide-screens) {
+    display: none;
+  }
+
+  &__images {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    &-wrapper {
+      width: 20%;
+      height: 8vh;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__text p {
+    margin: 0;
+    font-size: 0.65rem;
+    display: none;
+
+    // temporary!
+    // @include respond-to(wide-screens) {
+    //   display: block;
+    // }
+  }
+}
+
+a {
+  text-decoration: none;
+}

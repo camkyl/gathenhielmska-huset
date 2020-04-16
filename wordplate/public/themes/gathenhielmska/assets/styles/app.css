@@ -1842,6 +1842,7 @@ a.button {
   width: 100vw;
   margin: 0 auto;
   background-color: #475B6C;
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 @media only screen and (min-width: 830px) {
@@ -1856,12 +1857,40 @@ a.button {
   justify-content: center;
   width: 100%;
   justify-content: space-between;
-  margin-top: 5vh;
+  margin: 5vh 0;
+}
+
+.footer__links_wrapper p {
+  font-size: 1.125rem;
+}
+
+@media only screen and (min-width: 830px) {
+  .footer__links_wrapper p {
+    font-size: 1rem;
+  }
 }
 
 .footer__links_wrapper__left,
-.footer__links_wrapper __right {
-  width: 46vw;
+.footer__links_wrapper__right {
+  width: 43vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__links_wrapper__left h3,
+.footer__links_wrapper__right h3 {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: none;
+}
+
+@media only screen and (min-width: 830px) {
+  .footer__links_wrapper__left h3,
+  .footer__links_wrapper__right h3 {
+    font-size: 1.5rem;
+  }
 }
 
 .footer__links_wrapper__left {
@@ -1872,10 +1901,6 @@ a.button {
   margin-right: 4vw;
 }
 
-.footer__links_wrapper__right__space {
-  margin-top: 8vh;
-}
-
 .footer__straight-line {
   height: 1px;
   margin: 0 auto;
@@ -1883,29 +1908,63 @@ a.button {
   background-color: #F9F3EB;
 }
 
-.footer__links_wrapper__left p a {
-  color: #F9F3EB;
+@media only screen and (min-width: 830px) {
+  .footer__straight-line {
+    display: none;
+  }
 }
 
-.footer__links_wrapper__right p a {
+.footer__links_wrapper__left a,
+.footer__links_wrapper__right a {
   color: #F9F3EB;
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 830px) {
+  .footer__links_wrapper__left a,
+  .footer__links_wrapper__right a {
+    font-size: 1rem;
+  }
+}
+
+.footer__links_wrapper__right p {
+  margin: 0 0 10px 0;
 }
 
 .sponsors {
   width: 92vw;
-  margin: 3vh 0 3vh 0;
+  margin: 10px 0;
   justify-content: space-between;
 }
 
-.sponsors__image {
+@media only screen and (min-width: 830px) {
+  .sponsors {
+    display: none;
+  }
+}
+
+.sponsors__images {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sponsors__images-wrapper {
   width: 20%;
-  height: auto;
-  margin-left: 2vw;
+  height: 8vh;
+}
+
+.sponsors__images-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .sponsors__text p {
   margin: 0;
   font-size: 0.65rem;
+  display: none;
 }
 
 a {
