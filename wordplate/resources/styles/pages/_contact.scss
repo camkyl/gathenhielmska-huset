@@ -3,6 +3,31 @@
   display: none;
 }
 
+.contact-page .heading-wrapper {
+  width: 100vw;
+  margin: 0 auto;
+  background-color: $murgrona;
+}
+
+.contact-page .heading-wrapper__left {
+  margin-left: 4vw;
+}
+
+.contact-page .heading-wrapper__right {
+  margin-right: 4vw;
+}
+
+.contact-para {
+  background-color: $murgrona;
+  padding: 2vh 0;
+}
+
+.contact-para p {
+  width: 92vw;
+  margin: 0 auto;
+  color: $timglas;
+}
+
 .contact-title {
   display: none;
 }
@@ -11,21 +36,84 @@
   padding: 0;
 }
 
+// Images of the different rooms
+
+.contact-rooms {
+  width: 100vw;
+  background-color: $murgrona;
+
+  &__single {
+    width: 92vw;
+    background-color: $murgrona;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0vw 4vw 4vw 4vw;
+
+    &__img {
+      width: 100%;
+      position: relative;
+    }
+
+    &__title {
+      position: absolute;
+      margin: 0 4vw;
+      text-transform: uppercase;
+      top: 10px;
+    }
+
+    &__text {
+      position: absolute;
+      margin: 0 4vw;
+      text-align: center;
+    }
+  }
+}
+
 // Form container
 .form {
-  width: 92vw;
+  width: 100vw;
   margin: 0 auto;
+}
+
+.contact-form-wrapper .contact-form-text {
+  width: 92vw;
+  margin: 2vh auto;
+  color: $murgrona;
 }
 
 .form__name {
   width: 30px;
+  margin: 0 4vw;
+}
+
+#nf-field-5-wrap,
+#nf-field-6-wrap,
+#nf-field-7-wrap {
+  width: 92vw;
+  margin: 0 auto;
+}
+
+#nf-field-5,
+#nf-field-6,
+#nf-field-7 {
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+#nf-field-5::placeholder,
+#nf-field-6::placeholder,
+#nf-field-7::placeholder {
+  color: black;
 }
 
 #nf-field-8 {
   width: 92vw;
   background: transparent;
-  border: 1px solid white;
+  // border: 1px solid white;
   border-radius: 7px;
+  background-color: $eldsjal;
+  margin: 0 4vw;
 }
 
 #nf-form-title-2 {
@@ -34,7 +122,9 @@
 
 // Team at Gathenhielmska
 .in-charge-wrapper {
-  width: 92vw;
+  width: 100vw;
+  padding: 0 4vw;
+  background-color: $murgrona;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -42,22 +132,26 @@
   &__team {
     display: flex;
 
-    &__left,
-    &__right {
-      width: 46vw;
-    }
-
-    &__right {
-      align-self: center;
-    }
-
-    &__right img {
-      width: 100%;
-      align-self: center;
+    &__left {
+      width: 100vw;
     }
 
     p {
       font-size: 0.8rem;
     }
   }
+}
+
+.in-charge-wrapper__team__left {
+  margin-bottom: 3vh;
+}
+
+.in-charge-wrapper__team__left h3,
+.in-charge-wrapper__team__left p {
+  text-align: center;
+  margin: 1vh 0;
+}
+
+.in-charge-wrapper__team__left img {
+  width: 100%;
 }
