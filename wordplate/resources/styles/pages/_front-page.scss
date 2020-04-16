@@ -181,6 +181,10 @@
   }
 
   /* News section */
+  .landing-page__news .news {
+    background-color: $oppethav;
+  }
+
   &__news {
     @extend %flex-col-cen;
     padding-bottom: 14px;
