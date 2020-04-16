@@ -4,15 +4,21 @@
 
     <section class="landing-page__hero">
         <!--
-        <div class="landing-page__hero-title">
-            <h1>Gathenhielmska</h1>
+        <video autoplay muted >
+            <source src="<?php //echo bloginfo('template_url');
+                            ?>/herovideo/GH_Ingela_Herovideo_Mobile.mp4" type="video/mp4">
+            <source src="<?php //echo bloginfo('template_url');
+                            ?>/herovideo/GH_Ingela_Herovideo_Desktop.mp4" type="video/mp4" media="(min-width: 830px)" />
+        </video> -->
+        <div class="landing-page__hero-video-mobile">
+            <img src="<?php echo bloginfo('template_url'); ?>/herovideo/GH-Ingela-Herovideo-Mobile.gif" alt="Ingela Gathenhielmska hero motion">
         </div>
-        -->
-        <video autoplay muted class="landing-page__hero-video">
-            <source src="<?php echo bloginfo('template_url'); ?>/herovideo/GH_Ingela_Herovideo_Mobile.mp4" type="video/mp4">
-            <source src="<?php echo bloginfo('template_url'); ?>/herovideo/GH_Ingela_Herovideo_Desktop.mp4" type="video/mp4" media="(min-width: 830px)" />
-        </video>
-
+        <div class="landing-page__hero-video-desktop">
+            <video autoplay muted loop>
+                <source src="<?php echo bloginfo('template_url'); ?>/herovideo/GH_Ingela_Herovideo_Desktop.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
         <!-- <a href="#program">
             <div class="landing-page__arrow"></div>
