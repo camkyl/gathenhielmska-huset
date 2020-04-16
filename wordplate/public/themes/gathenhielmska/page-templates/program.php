@@ -15,13 +15,8 @@
 </div>
 
 <section class="events">
-
     <?php foreach ($posts as $post) : setup_postdata($post) ?>
-        <div class="">
-            <?php the_content(); ?>
-
-        </div>
+        <?php the_content(); ?>
     <?php endforeach; ?>
-
 </section>
 <?php get_footer(); ?>

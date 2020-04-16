@@ -34,7 +34,7 @@
                 <?php foreach ($events as $post) : setup_postdata($post) ?>
                     <article class="landing-page__program__event">
                         <?php echo the_content(); ?>
-                        <h3><?php echo the_title(); ?></h3>
+
                     </article>
                 <?php endforeach; ?>
             </div>

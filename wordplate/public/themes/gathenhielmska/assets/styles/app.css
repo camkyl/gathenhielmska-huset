@@ -639,6 +639,7 @@ a:visited {
 .archive__videos,
 .archive__images-wrapper,
 .archive,
+.single-program .events__wrapper,
 .single-news .news__article-content,
 .news__article,
 .news,
@@ -1098,20 +1099,64 @@ a.button {
   overflow-x: scroll;
 }
 
+@media only screen and (min-width: 830px) {
+  .landing-page__program__container {
+    width: 60vw;
+  }
+}
+
 .landing-page__program__container::-webkit-scrollbar {
   display: none;
 }
 
 .landing-page__program__event {
+  width: 45vw;
   scroll-snap-align: start;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.landing-page__program__event img {
-  width: 42vw;
+@media only screen and (min-width: 830px) {
+  .landing-page__program__event {
+    width: 20vw;
+  }
+}
+
+.landing-page__program__event .events__wrapper__img {
+  width: 45vw;
   height: 42vw;
-  margin-right: 1vw;
+}
+
+@media only screen and (min-width: 830px) {
+  .landing-page__program__event .events__wrapper__img {
+    width: 20vw;
+    height: 20vw;
+  }
+}
+
+.landing-page__program__event .events__wrapper__img img {
+  width: 96%;
+  height: 96%;
   object-fit: cover;
+}
+
+.landing-page__program__event .events__wrapper__content {
+  width: 100%;
+}
+
+.landing-page__program__event .events__wrapper__title {
+  color: #334859;
+  font-size: 1.5rem;
+  text-transform: none;
+  margin: 10px 0;
+}
+
+@media only screen and (min-width: 830px) {
+  .landing-page__program__event .events__wrapper__title {
+    font-size: 1.6rem;
+  }
 }
 
 .landing-page__program__event .events__wrapper__date {
@@ -1120,25 +1165,13 @@ a.button {
   font-weight: 300;
   color: #334859;
   text-transform: none;
-  margin: 10px 0px 0px 0px;
-}
-
-.landing-page__program__event h3 {
-  font-family: "Source Serif Pro", serif;
-  font-size: 1.4rem;
-  text-transform: none;
-  margin: 0;
-}
-
-@media only screen and (min-width: 830px) {
-  .landing-page__program__event h3 {
-    font-size: 1.6rem;
-  }
+  margin: 0px 0px 0px 0px;
 }
 
 .landing-page__program__event .events__wrapper__category,
 .landing-page__program__event .events__wrapper__straight-line,
-.landing-page__program__event .events__wrapper__text {
+.landing-page__program__event .events__wrapper__text,
+.landing-page__program__event .program-btn {
   display: none;
 }
 
@@ -1575,12 +1608,16 @@ a.button {
 
 .events__wrapper {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 0 6vh 0;
 }
 
 @media only screen and (min-width: 830px) {
   .events__wrapper {
     width: 30vw;
+    align-items: flex-start;
   }
 }
 
@@ -1590,24 +1627,31 @@ a.button {
 
 @media only screen and (min-width: 830px) {
   .events__wrapper__img {
-    object-fit: cover;
     height: 30vw;
     width: 30vw;
   }
 }
 
-.events__wrapper__straight-line {
-  height: 1px;
-  width: 30vw;
-  background-color: #F9F3EB;
-  margin-left: 5vw;
+.events__wrapper__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.events__wrapper__content {
+  width: 92%;
 }
 
 @media only screen and (min-width: 830px) {
-  .events__wrapper__straight-line {
-    margin-left: 0;
-    width: 10vw;
+  .events__wrapper__content {
+    width: 100%;
   }
+}
+
+.events__wrapper__straight-line {
+  height: 1px;
+  width: 120px;
+  background-color: #F9F3EB;
 }
 
 .events__wrapper__category {
@@ -1615,7 +1659,6 @@ a.button {
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin: 10px 0 10px 5vw;
 }
 
 @media only screen and (min-width: 830px) {
@@ -1626,15 +1669,14 @@ a.button {
 }
 
 .events__wrapper h2 {
-  margin: 10px 5vw;
   font-family: "Source Serif Pro", serif;
   font-size: 2rem;
   text-transform: uppercase;
+  margin: 10px 0 0 0;
 }
 
 @media only screen and (min-width: 830px) {
   .events__wrapper h2 {
-    margin: 0;
     font-size: 2.2rem;
   }
 }
@@ -1642,13 +1684,7 @@ a.button {
 .events__wrapper__date {
   font-size: 0.875rem;
   font-weight: 300;
-  margin-left: 5vw;
-}
-
-@media only screen and (min-width: 830px) {
-  .events__wrapper__date {
-    margin-left: 0;
-  }
+  margin: 0 0 10px 0;
 }
 
 .events__wrapper__text {
@@ -1656,14 +1692,11 @@ a.button {
   height: 10.5rem;
   overflow: hidden;
   font-weight: 300;
-  margin-left: 5vw;
-  margin-right: 5vw;
 }
 
 @media only screen and (min-width: 830px) {
   .events__wrapper__text {
     font-size: 1.125rem;
-    margin-left: 0;
   }
 }
 
@@ -1681,7 +1714,6 @@ a.button {
   color: #F9F3EB;
   text-align: center;
   padding: 10px 0;
-  margin-left: 5vw;
   width: 90vw;
 }
 
@@ -1689,7 +1721,7 @@ a.button {
   .program-btn {
     font-size: 1.125rem;
     width: 92%;
-    margin: 0;
+    margin: 0 auto;
   }
 }
 
@@ -1704,10 +1736,15 @@ a.button {
 .program-title .heading-wrapper {
   margin-top: 0;
   margin-bottom: 0;
+  padding: 20px 0;
 }
 
+/* single-program.php */
+
 .single-program {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow-y: hidden;
   padding-bottom: 5vh;
   background-color: #334859;
@@ -1715,22 +1752,62 @@ a.button {
 
 .single-program .events__wrapper {
   background-color: #334859;
+  width: 100vw;
+  margin: 0;
 }
 
 .single-program .events__wrapper__img {
   width: 100vw;
 }
 
+.single-program .events__wrapper__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.single-program .events__wrapper__content {
+  width: 92vw;
+}
+
 @media only screen and (min-width: 830px) {
-  .single-program .events__wrapper__straight-line {
-    width: 90vw;
-    margin-left: 5vw;
+  .single-program .events__wrapper__content {
+    width: 60vw;
   }
 }
 
-.single-program .events__img {
-  overflow-y: hidden;
-  object-position: center center;
+@media only screen and (min-width: 830px) {
+  .single-program .events__wrapper__straight-line {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 830px) {
+  .single-program .events__wrapper__category,
+  .single-program .events__wrapper__title,
+  .single-program .events__wrapper__date {
+    text-align: center;
+  }
+}
+
+.single-program .single-event-line {
+  display: none;
+}
+
+@media only screen and (min-width: 830px) {
+  .single-program .single-event-line {
+    display: block;
+    position: absolute;
+    right: 2vw;
+    width: 96vw;
+    height: 1px;
+    background-color: #F9F3EB;
+  }
+}
+
+.single-program .events__wrapper__text {
+  margin-top: 40px;
 }
 
 .single-program button {

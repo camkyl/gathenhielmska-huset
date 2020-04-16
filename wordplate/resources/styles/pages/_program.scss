@@ -16,32 +16,46 @@
 
   &__wrapper {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 0 6vh 0;
 
     @include respond-to(wide-screens) {
       width: 30vw;
+      align-items: flex-start;
     }
 
     &__img {
       width: 100vw;
 
       @include respond-to(wide-screens) {
-        object-fit: cover;
         height: 30vw;
         width: 30vw;
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      width: 92%;
+      @include respond-to(wide-screens) {
+        width: 100%;
       }
     }
 
     &__straight-line {
       height: 1px;
-      width: 30vw;
+      width: 120px;
       background-color: $timglas;
-      margin-left: 5vw;
 
-      @include respond-to(wide-screens) {
-        margin-left: 0;
-        width: 10vw;
-      }
+      // @include respond-to(wide-screens) {
+      //   width: 10vw;
+      // }
     }
 
     &__category {
@@ -49,7 +63,7 @@
       font-size: 0.75rem;
       font-weight: bold;
       text-transform: uppercase;
-      margin: 10px 0 10px 5vw;
+      // margin: 10px 0 10px 5vw;
 
       @include respond-to(wide-screens) {
         font-size: 0.875rem;
@@ -58,13 +72,12 @@
     }
 
     & h2 {
-      margin: 10px 5vw;
       font-family: $newsHeadings;
       font-size: 2rem;
       text-transform: uppercase;
+      margin: 10px 0 0 0;
 
       @include respond-to(wide-screens) {
-        margin: 0;
         font-size: 2.2rem;
       }
     }
@@ -72,11 +85,11 @@
     &__date {
       font-size: 0.875rem;
       font-weight: 300;
-      margin-left: 5vw;
+      margin: 0 0 10px 0;
 
-      @include respond-to(wide-screens) {
-        margin-left: 0;
-      }
+      // @include respond-to(wide-screens) {
+      //   margin-left: 0;
+      // }
     }
 
     &__text {
@@ -84,12 +97,9 @@
       height: 10.5rem;
       overflow: hidden;
       font-weight: 300;
-      margin-left: 5vw;
-      margin-right: 5vw;
 
       @include respond-to(wide-screens) {
         font-size: 1.125rem;
-        margin-left: 0;
       }
     }
   }
@@ -109,13 +119,12 @@
   color: $timglas;
   text-align: center;
   padding: 10px 0;
-  margin-left: 5vw;
   width: 90vw;
 
   @include respond-to(wide-screens) {
     font-size: 1.125rem;
     width: 92%;
-    margin: 0;
+    margin: 0 auto;
   }
 
   a {
@@ -130,12 +139,15 @@
 .program-title .heading-wrapper {
   margin-top: 0;
   margin-bottom: 0;
+  padding: 20px 0;
 }
 
-// single-program.php
+/* single-program.php */
 
 .single-program {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow-y: hidden;
   padding-bottom: 5vh;
   background-color: $murgrona;
@@ -143,26 +155,60 @@
 
 .single-program .events__wrapper {
   background-color: $murgrona;
+  width: 100vw;
+  @extend %flex-col-cen;
+  margin: 0;
 }
 
 .single-program .events__wrapper__img {
   width: 100vw;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
 }
 
-.single-program .events__wrapper__category {
-  // margin-left: 50vw;
+.single-program .events__wrapper__content {
+  width: 92vw;
+
+  @include respond-to(wide-screens) {
+  width: 60vw;
+  }
 }
 
 .single-program .events__wrapper__straight-line {
   @include respond-to(wide-screens) {
-    width: 90vw;
-    margin-left: 5vw;
+    display: none;
   }
 }
 
-.single-program .events__img {
-  overflow-y: hidden;
-  object-position: center center;
+.single-program .events__wrapper__category,
+.single-program .events__wrapper__title,
+.single-program .events__wrapper__date {
+
+  @include respond-to(wide-screens) {
+  text-align: center;
+  }
+}
+
+.single-program .single-event-line {
+  display: none;
+
+  @include respond-to(wide-screens) {
+    display: block;
+    position: absolute;
+    right: 2vw;
+    width: 96vw;
+    height: 1px;
+    background-color: $timglas;
+  }
+}
+
+.single-program .events__wrapper__text {
+  margin-top: 40px;
 }
 
 .single-program button {
