@@ -27,14 +27,13 @@
                 <div class="heading-wrapper__right"></div>
             </div>
 
-            <?php $args = ['post_type' => 'program', 'numberposts' => 4, 'order' => 'desc']; ?>
+            <?php $args = ['post_type' => 'program', 'numberposts' => 5, 'order' => 'desc']; ?>
             <?php $events = get_posts($args); ?>
 
             <div class="landing-page__program__container">
                 <?php foreach ($events as $post) : setup_postdata($post) ?>
                     <article class="landing-page__program__event">
                         <?php echo the_content(); ?>
-
                     </article>
                 <?php endforeach; ?>
             </div>

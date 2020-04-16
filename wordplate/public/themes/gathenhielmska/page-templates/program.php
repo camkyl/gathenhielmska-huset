@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<?php $args = ["post_type" => "program"]; ?>
+<?php $args = ["post_type" => "program", 'numberposts' => '-1']; ?>
 
 <?php $posts = get_posts($args); ?>
 
