@@ -1014,20 +1014,7 @@ a.button {
   display: flex;
   flex-direction: column;
   background-color: #F6E5CA;
-  /* Hero image */
-  /*
-  &__hero-title {
-    height: calc(92vh - 40px);
-    @extend %flex-col-cen;
-    justify-content: center;
-  }
-
-  & h1 {
-    @include respond-to(wide-screens) {
-      font-size: 4.6rem;
-    }
-  }
-  */
+  /* Hero video */
   /* Program section */
   /* About section */
   /* News section */
@@ -1036,22 +1023,38 @@ a.button {
 .landing-page__hero {
   width: 100%;
   height: 92vh;
-  /*
-  padding: 10px;
-  background-color: rgb(151, 151, 151);
-  background: url('hero-front.jpg') no-repeat center center;
-  background-size: cover;
-  box-shadow: inset 0 0 0 3000px rgba(50, 62, 69, 0.3);
-  */
 }
 
-.landing-page__hero-video {
+.landing-page__hero-video-mobile {
+  width: 100vw;
+  height: 100%;
+}
+
+@media only screen and (min-width: 830px) {
+  .landing-page__hero-video-mobile {
+    display: none;
+  }
+}
+
+.landing-page__hero-video-mobile img {
   width: 100vw;
   height: 100%;
   object-fit: cover;
 }
 
-.landing-page__hero-video source {
+.landing-page__hero-video-desktop {
+  display: none;
+}
+
+@media only screen and (min-width: 830px) {
+  .landing-page__hero-video-desktop {
+    display: block;
+    width: 100vw;
+    height: 100%;
+  }
+}
+
+.landing-page__hero-video-desktop video {
   width: 100vw;
   height: 100%;
   object-fit: cover;
