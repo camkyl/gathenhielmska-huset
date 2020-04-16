@@ -6,15 +6,12 @@
     <div class="footer__links_wrapper">
         <div class="footer__links_wrapper__left">
             <h3>Meny</h3>
-            <a href="">Hem</a>
-            <a href="">Program</a>
-            <a href="">Arkiv</a>
-            <a href="">Om huset</a>
-            <a href="">Kontakt</a>
-            <a href="">Verksamheter</a>
-            <a href="">Aktuellt</a>
-            <a href="">Språk</a>
-            <a href="">Sök</a>
+            <?php $pages = get_pages(["sort_column" => "menu_order"]); ?>
+            <?php foreach ($pages as $page) : ?>
+                <a href="<?php echo get_permalink($page); ?>">
+                    <?php echo $page->post_title; ?>
+                </a>
+            <?php endforeach; ?>
         </div>
 
         <div class="footer__links_wrapper__right">
