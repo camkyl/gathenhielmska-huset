@@ -93,15 +93,15 @@
   margin: 3vh auto;
 }
 
-.events__wrapper a.button {
-  width: 25vw;
-  margin-left: 5vw;
-  margin-bottom: 3vh;
+// .events__wrapper a.button {
+//   width: 25vw;
+//   margin-left: 5vw;
+//   margin-bottom: 3vh;
 
-  @include respond-to(wide-screens) {
-    width: 25vw;
-  }
-}
+//   @include respond-to(wide-screens) {
+//     width: 25vw;
+//   }
+// }
 
 // single-program.php
 
