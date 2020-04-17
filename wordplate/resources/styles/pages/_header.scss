@@ -157,8 +157,13 @@ body {
   z-index: 2;
   background-image: url("../../icons/ingela.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: 100% auto;
+
+  @include respond-to(wide-screens) {
+
+    background-position: center bottom;
+  }
 }
 
 .nav-language li:nth-child(1) {
@@ -220,7 +225,7 @@ body {
   display: flex;
 
   @include respond-to(wide-screens) {
-    height: 100vh;
+    height: 88vh;
     width: 20vw;
     display: block;
     margin-top: 8vh;

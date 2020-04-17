@@ -50,14 +50,13 @@
   & p,
   & a {
     color: $timglas;
-    margin: 0;
   }
 
   & h4 {
     font-family: $newsHeadings;
     font-size: 1.5rem;
     font-weight: 600;
-    margin: 0;
+    margin: 14px 0 8px 0;
 
     @include respond-to(wide-screens) {
       font-size: 2rem;
