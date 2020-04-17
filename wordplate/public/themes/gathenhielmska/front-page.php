@@ -14,9 +14,9 @@
             </video>
         </div>
 
-        <!-- <a href="#program">
+        <a href="#program" class="arrow">
             <div class="landing-page__arrow"></div>
-        </a> -->
+        </a>
     </section>
 
     <section class="landing-page__program" id="program">
