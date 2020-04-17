@@ -11,10 +11,18 @@ School assignment at Yrgo: Create a website for Gathenhielmska Huset
 * JavaScript
 
 ## Requirements
-TBA
-
-## Preview
-TBA
+* Mobile first
+* Landningssida 
+* Nyheter
+* Kalender/Evenemang - lista över evenemang
+* Bokningssystem för evenemang med formulär där man kan fylla i tid, plats, kontakt, typ av evenemang och kort text för beskrivning.
+* Kontaktformulär
+* Information om verksamheten
+* Språkversioner i framtiden
+* Bild-/filmarkiv. 
+* Sökfunktion
+* Header
+* Footer 
 
 ## Installation
 TBA
