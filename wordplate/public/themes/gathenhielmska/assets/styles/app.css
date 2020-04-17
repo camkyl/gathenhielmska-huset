@@ -1932,6 +1932,10 @@ a {
   width: 100vw;
   padding: 20px 0 40px 0;
   background-color: #334859;
+  background-image: url(../images/ingela.png?63f3afbc0c3abe92ef17e3c3d59b4388);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
 }
 
 @media only screen and (min-width: 830px) {

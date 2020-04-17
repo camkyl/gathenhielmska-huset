@@ -60,6 +60,10 @@
   width: 100vw;
   padding: 20px 0 40px 0;
   background-color: $murgrona;
+  background-image: url("../../icons/ingela.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
 
   @include respond-to(wide-screens) {
     display: flex;
