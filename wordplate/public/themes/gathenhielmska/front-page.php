@@ -39,7 +39,7 @@
             </div>
 
             <div class="landing-page__button-wrapper">
-                <a href="<?php the_permalink(); ?>" class="button">Se hela programmet</a>
+                <a href="<?php echo get_bloginfo('url'); ?>/program" class="button">Se hela programmet</a>
             </div>
         </div>
     </section>

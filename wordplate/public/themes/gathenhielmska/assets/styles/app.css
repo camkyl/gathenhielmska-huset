@@ -617,6 +617,7 @@ a,
 a:visited {
   font-family: "Muli", sans-serif;
   color: #000000;
+  cursor: pointer;
 }
 
 .archive__alternatives-images,
